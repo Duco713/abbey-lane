@@ -141,13 +141,9 @@
     items.forEach(function (item) {
       var show = filter === 'all' || item.dataset.category === filter;
       item.classList.toggle('hidden', !show);
-      item.classList.toggle('md:col-span-12', false);
-    });
-    // Bij een filter tonen we de projecten in een rustig, gelijk raster
-    items.forEach(function (item) {
-      var base = item.dataset.span;
-      item.classList.toggle(base, filter === 'all');
-      item.classList.toggle('md:col-span-6', filter !== 'all');
+      // 'Alle': het eigen redactionele raster; bij een filter: twee gelijke kolommen
+      var span = filter === 'all' ? item.dataset.span : 'md:col-span-6';
+      item.className = item.className.replace(/\bmd:col-span-\d+\b/g, '').trim() + ' ' + span;
     });
   }
   buttons.forEach(function (b) {
