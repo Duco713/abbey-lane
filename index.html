@@ -515,80 +515,72 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
         <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Gerealiseerde Ruimtes</span>
         <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-space-xs">Portfolio &amp; Projecten</h2>
       </div>
-      <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Een selectie van recente interieurs in de regio Valkenswaard, Eindhoven en de Brabantse Kempen.</p>
-    </div>
-
-    <div class="flex flex-wrap items-center gap-space-xs pb-space-sm" role="group" aria-label="Filter projecten">
-      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="alle" aria-pressed="true">Alle Projecten</button>
-      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="villa" aria-pressed="false">Totaalinrichting Villa</button>
-      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="kleur" aria-pressed="false">Kleur- &amp; Behangplan</button>
-      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="appartement" aria-pressed="false">Boutique Appartement</button>
-      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="maatwerk" aria-pressed="false">Maatwerk Meubilair</button>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Een greep uit interieurs waarvoor wij kleuradvies, styling en realisatie verzorgden.</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop" id="portfolio-grid">
-      <article class="project lg:col-span-7 group space-y-space-sm" data-category="villa">
-        <div class="rounded overflow-hidden aspect-[16/10] bg-surface-taupe relative shadow-sm">
-          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Open villa woonkamer met kalkstenen vloer en gerookt eiken maatwerk" style="background-image:url('images/villa.jpg')"></div>
+      <a href="portfolio.html" class="lg:col-span-7 group space-y-space-sm block">
+        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[16/11] bg-surface-taupe relative shadow-sm">
+          <img src="images/projecten/p17.jpg" alt="Woonkamer met terracotta visgraatwand" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
           <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
-          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Valkenswaard • 2025</span></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Kleuradvies • Styling • Realisatie</span></div>
         </div>
         <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
           <div>
-            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Villa De Dommel</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Totaalinrichting • Warm minimalistisch familiehuis met aardetinten en maatwerk hout</p>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Terracotta &amp; Visgraat</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Een terracotta wand met visgraatmotief, warme accenten en een zacht vintage vloerkleed.</p>
           </div>
           <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
         </div>
-      </article>
-      <article class="project lg:col-span-5 group space-y-space-sm" data-category="kleur">
-        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[16/14] bg-surface-taupe relative shadow-sm">
-          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Eetsalon met flessengroene kalkwanden en fluwelen stoelen" style="background-image:url('images/herenhuis.jpg')"></div>
+      </a>
+      <a href="portfolio.html" class="lg:col-span-5 group space-y-space-sm block">
+        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[5/5.5] bg-surface-taupe relative shadow-sm">
+          <img src="images/projecten/p08.jpg" alt="Woonkamer met fuchsia fluwelen banken en donkere wand" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
           <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
-          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Valkenswaard Centrum</span></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Kleuradvies • Styling • Realisatie</span></div>
         </div>
         <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
           <div>
-            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Herenhuis Valkenswaard</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Kleuradvies • Statement behang van Arte en rijke velours texturen</p>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Fluweel &amp; Diepe Tinten</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Fluwelen banken in fuchsia tegen een donkere accentwand, met gouden ringlampen.</p>
           </div>
           <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
         </div>
-      </article>
-      <article class="project lg:col-span-5 group space-y-space-sm" data-category="appartement">
-        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[16/14] bg-surface-taupe relative shadow-sm">
-          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Industriële loft met baksteen en zachte modulaire banken" style="background-image:url('images/loft.jpg')"></div>
+      </a>
+      <a href="portfolio.html" class="lg:col-span-5 group space-y-space-sm block">
+        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[5/5.5] bg-surface-taupe relative shadow-sm">
+          <img src="images/projecten/p14.jpg" alt="Lichte woonruimte onder een houten kap" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
           <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
-          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Kempen Loft</span></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Kleuradvies • Styling • Realisatie</span></div>
         </div>
         <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
           <div>
-            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Loft Brabant</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Meubilering • Industrieel meets zacht linnen met retro keramiek accenten</p>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Licht onder de Kap</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Een lichte leefruimte onder een houten kapconstructie met warme oranje accenten.</p>
           </div>
           <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
         </div>
-      </article>
-      <article class="project lg:col-span-7 group space-y-space-sm" data-category="maatwerk">
-        <div class="rounded overflow-hidden aspect-[16/10] bg-surface-taupe relative shadow-sm">
-          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Stadswoning met terracotta maatwerk hoekbank en eiken boekenkast" style="background-image:url('images/stadswoning.jpg')"></div>
+      </a>
+      <a href="portfolio.html" class="lg:col-span-7 group space-y-space-sm block">
+        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[16/11] bg-surface-taupe relative shadow-sm">
+          <img src="images/projecten/p03.jpg" alt="Eethoek met kleurrijk behang en organisch vloerkleed" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
           <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
-          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Eindhoven Regio</span></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Kleuradvies • Styling • Realisatie</span></div>
         </div>
         <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
           <div>
-            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Stadswoning Eindhoven</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Maatwerk • Terracotta accenten, maatwerk hoekbank en asymmetrische kunst</p>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Eethoek met Statement Behang</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Kleurrijk behang, een organisch vloerkleed en een mix van zachte stoelen rond de eettafel.</p>
           </div>
           <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
         </div>
-      </article>
+      </a>
     </div>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-space-md pt-space-md">
       <a href="portfolio.html" class="inline-flex items-center gap-space-xs px-space-xl py-space-md rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all shadow-md group">
         <span>Bekijk de Volledige Portfolio</span><span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
       </a>
-      <span class="font-body-sm text-body-sm text-on-surface-variant">9 projecten • met materialen &amp; kleurpaletten</span>
+      <span class="font-body-sm text-body-sm text-on-surface-variant">31 projecten in beeld</span>
     </div>
   </div>
 </section>
@@ -854,6 +846,6 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   </div>
 </footer>
 
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>
