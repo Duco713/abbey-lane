@@ -54,10 +54,11 @@
   // ---- Actieve navigatie bij scrollen --------------------------------------
   var navLinks = document.querySelectorAll('.nav-link');
   var sections = Array.prototype.map.call(navLinks, function (a) {
-    return document.querySelector(a.getAttribute('href'));
+    var href = a.getAttribute('href');
+    return href.charAt(0) === '#' ? document.querySelector(href) : null;
   }).filter(Boolean);
 
-  if ('IntersectionObserver' in window) {
+  if (sections.length && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
@@ -114,16 +115,18 @@
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () { applyFilter(chip.dataset.filter); });
   });
-  applyFilter('alle');
+  if (chips.length) applyFilter('alle');
 
   // ---- Knoppen die een dienst vooraf selecteren ----------------------------
   var dienst = document.getElementById('dienst');
   document.querySelectorAll('[data-service]').forEach(function (el) {
-    el.addEventListener('click', function () { dienst.value = el.dataset.service; });
+    el.addEventListener('click', function () { if (dienst) dienst.value = el.dataset.service; });
   });
 
-  // ---- Aanvraagformulier ---------------------------------------------------
+  // ---- Aanvraagformulier (alleen op de homepage) ---------------------------
   var form = document.getElementById('consultation-form');
+  if (form) initForm();
+  function initForm() {
   var feedback = document.getElementById('form-feedback');
   var feedbackText = document.getElementById('form-feedback-text');
   var errorEl = document.getElementById('form-error');
@@ -202,6 +205,7 @@
       '&body=' + encodeURIComponent(body);
     showSuccess('Uw mailprogramma wordt geopend met uw aanvraag. Verstuur de e-mail om de aanvraag af te ronden.');
   });
+  }
 
   // ---- Openingstijden: vandaag uitlichten ----------------------------------
   var today = document.querySelector('.opening-hours [data-day="' + new Date().getDay() + '"]');
@@ -211,5 +215,6 @@
   }
 
   // ---- Jaartal footer -------------------------------------------------------
-  document.getElementById('year').textContent = new Date().getFullYear();
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 })();
