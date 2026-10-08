@@ -4,15 +4,17 @@
    Zet GeosansLight.woff2 / .woff / .ttf in de map /fonts. Zolang dat bestand
    ontbreekt, wordt Jost gebruikt: een geometrische letter die er sterk op lijkt. */
 
+/* Zodra GeosansLight in /fonts staat: deze regel weer aanzetten (verwijder de commentaartekens).
+   Zolang het bestand ontbreekt, staat hij uit, zodat de browser geen 404-meldingen geeft.
 @font-face {
   font-family: 'GeosansLight';
   src: url('../fonts/GeosansLight.woff2') format('woff2'),
-       url('../fonts/GeosansLight.woff') format('woff'),
        url('../fonts/GeosansLight.ttf') format('truetype');
   font-weight: 300 400;
   font-style: normal;
   font-display: swap;
 }
+*/
 
 :root { --font-abbey: 'GeosansLight', 'Jost', 'Futura', 'Century Gothic', sans-serif; }
 
