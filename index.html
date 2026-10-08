@@ -17,11 +17,13 @@
 <script>
   // Kleurthema direct zetten (voorkomt flitsen): 'licht' of 'roze'
   (function(){var t='licht';try{t=localStorage.getItem('al-theme')||t}catch(e){}
-  if(t!=='licht'&&t!=='roze')t='licht';document.documentElement.dataset.theme=t;})();
+  if(t!=='licht'&&t!=='roze')t='licht';document.documentElement.dataset.theme=t;
+  var f='klassiek';try{f=localStorage.getItem('al-font')||f}catch(e){}
+  if(f!=='klassiek'&&f!=='abbey')f='klassiek';document.documentElement.dataset.font=f;})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Jost:wght@300;400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha-value>)","surface-container-lowest":"rgb(var(--c-surface-container-lowest) / <alpha-value>)","surface-container-low":"rgb(var(--c-surface-container-low) / <alpha-value>)","surface-container":"rgb(var(--c-surface-container) / <alpha-value>)","surface-container-high":"rgb(var(--c-surface-container-high) / <alpha-value>)","surface-container-highest":"rgb(var(--c-surface-container-highest) / <alpha-value>)","surface-plaster":"rgb(var(--c-surface-plaster) / <alpha-value>)","surface-taupe":"rgb(var(--c-surface-taupe) / <alpha-value>)","surface-dim":"rgb(var(--c-surface-dim) / <alpha-value>)","primary":"rgb(var(--c-primary) / <alpha-value>)","primary-container":"rgb(var(--c-primary-container) / <alpha-value>)","on-primary":"rgb(var(--c-on-primary) / <alpha-value>)","secondary":"rgb(var(--c-secondary) / <alpha-value>)","secondary-container":"rgb(var(--c-secondary-container) / <alpha-value>)","on-surface":"rgb(var(--c-on-surface) / <alpha-value>)","on-surface-variant":"rgb(var(--c-on-surface-variant) / <alpha-value>)","clay-terracotta":"rgb(var(--c-clay-terracotta) / <alpha-value>)","canvas-cream":"rgb(var(--c-canvas-cream) / <alpha-value>)","espresso-deep":"rgb(var(--c-espresso-deep) / <alpha-value>)","espresso-text":"rgb(var(--c-espresso-text) / <alpha-value>)","border-hairline":"rgb(var(--c-border-hairline) / <alpha-value>)","olive-khaki":"rgb(var(--c-olive-khaki) / <alpha-value>)","outline-variant":"rgb(var(--c-outline-variant) / <alpha-value>)","error":"rgb(var(--c-error) / <alpha-value>)","gold":"rgb(var(--c-gold) / <alpha-value>)"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"gutter-desktop":"2.5rem","margin-desktop":"4rem","space-2xl":"5rem","space-md":"1rem",gutter:"1.5rem","space-xs":"0.25rem","space-lg":"1.75rem",margin:"1.25rem","margin-tablet":"2.5rem","space-xl":"3rem","space-sm":"0.5rem"},fontFamily:{sans:["Hanken Grotesk","system-ui","sans-serif"],serif:["Newsreader","Georgia","serif"],"headline-lg":["Newsreader"],"label-md":["Hanken Grotesk"],"display-hero-mobile":["Newsreader"],"body-lg":["Hanken Grotesk"],"headline-sm":["Newsreader"],"headline-md":["Newsreader"],"label-caps":["Hanken Grotesk"],"headline-lg-mobile":["Newsreader"],"body-sm":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"display-hero":["Newsreader"]},fontSize:{"headline-lg":["3rem",{lineHeight:"1.15",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["0.875rem",{lineHeight:"1.4",letterSpacing:"0.01em",fontWeight:"500"}],"display-hero-mobile":["2.75rem",{lineHeight:"1.15",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.65",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["1.5rem",{lineHeight:"1.35",letterSpacing:"0",fontWeight:"400"}],"headline-md":["2rem",{lineHeight:"1.25",letterSpacing:"-0.01em",fontWeight:"400"}],"label-caps":["0.6875rem",{lineHeight:"1.3",letterSpacing:"0.12em",fontWeight:"600"}],"headline-lg-mobile":["2rem",{lineHeight:"1.25",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["0.8125rem",{lineHeight:"1.5",letterSpacing:"0.01em",fontWeight:"400"}],"body-md":["0.9375rem",{lineHeight:"1.6",letterSpacing:"0",fontWeight:"400"}],"display-hero":["4.5rem",{lineHeight:"1.08",letterSpacing:"-0.025em",fontWeight:"400"}]}}}};
@@ -77,6 +79,7 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   a[href^="tel"]{color:inherit;text-decoration:none}
 </style>
 <link rel="stylesheet" href="css/animations.css?v=2"/>
+<link rel="stylesheet" href="css/fonts.css?v=2"/>
 </head>
 <body class="bg-surface text-on-surface font-sans antialiased selection:bg-secondary-container selection:text-primary">
 
@@ -106,9 +109,26 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#contact">Contact</a>
     </nav>
     <div class="xl:flex-1 flex items-center justify-end gap-space-md shrink-0">
-      <div class="theme-switch hidden md:flex items-center gap-0.5 p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Kleurthema">
+      <div class="relative hidden md:block" id="display-settings">
+        <button type="button" id="settings-toggle" class="w-10 h-10 rounded-full bg-surface-container border border-border-hairline text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors" aria-label="Weergave: kleur en lettertype" aria-expanded="false" aria-controls="settings-panel" title="Kleur &amp; lettertype">
+          <span class="material-symbols-outlined text-[20px]">tune</span>
+        </button>
+        <div id="settings-panel" class="hidden absolute right-0 top-12 w-60 p-space-md rounded bg-canvas-cream border border-border-hairline shadow-xl space-y-space-sm z-50">
+          <div class="flex items-center justify-between gap-space-sm">
+            <span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Kleur</span>
+      <div class="theme-switch flex items-center gap-0.5 p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Kleurthema">
         <button type="button" data-theme-option="licht" class="w-7 h-7 rounded-full flex items-center justify-center" aria-label="Licht thema" title="Licht"><span class="w-3 h-3 rounded-full bg-white ring-1 ring-gold/60"></span></button>
         <button type="button" data-theme-option="roze" class="w-7 h-7 rounded-full flex items-center justify-center" aria-label="Roze thema" title="Roze"><span class="w-3 h-3 rounded-full bg-[#F2DFD8] ring-1 ring-gold/60"></span></button>
+      </div>
+          </div>
+          <div class="flex items-center justify-between gap-space-sm">
+            <span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Letter</span>
+            <div class="font-switch flex items-center gap-0.5 p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Lettertype">
+        <button type="button" data-font-option="klassiek" class="h-7 px-2.5 rounded-full text-[15px] leading-none text-on-surface-variant" aria-label="Klassiek lettertype" title="Klassiek">Aa</button>
+        <button type="button" data-font-option="abbey" class="h-7 px-2.5 rounded-full text-[13px] leading-none text-on-surface-variant" aria-label="Abbey Lane lettertype" title="Abbey Lane">AA</button>
+      </div>
+          </div>
+        </div>
       </div>
       <a class="hidden lg:flex xl:hidden 2xl:flex items-center gap-space-xs whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="tel:+31408429365">
         <span class="material-symbols-outlined text-[18px] text-secondary">call</span><span>040-8429365</span>
@@ -143,6 +163,10 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#contact" data-menu-close>Contact</a>
     </nav>
     <div class="mt-auto space-y-space-sm">
+      <div class="font-switch flex items-center p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Lettertype">
+        <button type="button" data-font-option="klassiek" class="flex-1 py-2 rounded-full text-[16px] text-on-surface-variant">Aa Klassiek</button>
+        <button type="button" data-font-option="abbey" class="flex-1 py-2 rounded-full text-[13px] text-on-surface-variant">ABBEY LANE</button>
+      </div>
       <div class="theme-switch flex items-center p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Kleurthema">
         <button type="button" data-theme-option="licht" class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-white ring-1 ring-gold/60"></span>Licht</button>
         <button type="button" data-theme-option="roze" class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-[#F2DFD8] ring-1 ring-gold/60"></span>Roze</button>
@@ -963,7 +987,7 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   </div>
 </footer>
 
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=6"></script>
 <script src="js/animations.js?v=5"></script>
 </body>
 </html>

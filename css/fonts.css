@@ -1,0 +1,61 @@
+/* Abbey Lane – lettertype-varianten
+   'klassiek' = Newsreader + Hanken Grotesk (standaard)
+   'abbey'    = het huislettertype GeosansLight, letterafstand 200, contour 0,75
+   Zet GeosansLight.woff2 / .woff / .ttf in de map /fonts. Zolang dat bestand
+   ontbreekt, wordt Jost gebruikt: een geometrische letter die er sterk op lijkt. */
+
+@font-face {
+  font-family: 'GeosansLight';
+  src: url('../fonts/GeosansLight.woff2') format('woff2'),
+       url('../fonts/GeosansLight.woff') format('woff'),
+       url('../fonts/GeosansLight.ttf') format('truetype');
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root { --font-abbey: 'GeosansLight', 'Jost', 'Futura', 'Century Gothic', sans-serif; }
+
+/* Koppen, quotes, titels en menu */
+[data-font="abbey"] :is(h1, h2, h3, h4, blockquote,
+  .font-serif, .font-display-hero, .font-headline-lg, .font-headline-md, .font-headline-sm,
+  #mobile-menu nav a) {
+  font-family: var(--font-abbey) !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: .2em !important;           /* letterafstand 200 */
+  -webkit-text-stroke: .75px currentColor;   /* contour 0,75 */
+  overflow-wrap: break-word;
+}
+[data-font="abbey"] :is(h1, h2, h3, h4, blockquote) * { font-style: normal !important; }
+
+/* Kleine labels en knoppen: zelfde letter, iets dunnere contour zodat ze scherp blijven */
+[data-font="abbey"] :is(.font-label-caps, .font-label-md, button, .rounded-full) {
+  font-family: var(--font-abbey) !important;
+  letter-spacing: .2em !important;
+  -webkit-text-stroke: .35px currentColor;
+}
+
+/* Menu: zelfde letter, iets compactere afstand zodat alles op één regel past */
+[data-font="abbey"] .nav-link { font-family: var(--font-abbey) !important; letter-spacing: .12em !important; -webkit-text-stroke: .35px currentColor; font-size: 13px; }
+/* Knoppen niet extra breed maken */
+[data-font="abbey"] .rounded-full { letter-spacing: .08em !important; }
+
+/* Lopende tekst blijft goed leesbaar in Hanken Grotesk */
+
+/* Grote koppen iets kleiner, want de extra letterafstand maakt ze breder */
+[data-font="abbey"] .md\:text-display-hero { font-size: clamp(2.2rem, 5vw, 3.9rem) !important; line-height: 1.15 !important; }
+[data-font="abbey"] :is(.text-display-hero-mobile) { font-size: clamp(2rem, 8vw, 2.4rem); }
+[data-font="abbey"] :is(.md\:text-headline-lg, .text-headline-lg) { font-size: clamp(1.6rem, 3.4vw, 2.5rem) !important; line-height: 1.25 !important; }
+[data-font="abbey"] .text-headline-lg-mobile { font-size: clamp(1.5rem, 6vw, 1.75rem); }
+[data-font="abbey"] .text-headline-md { font-size: clamp(1.35rem, 2.4vw, 1.7rem) !important; }
+
+/* Schakelaar */
+.font-switch [data-font-option] { transition: background-color .3s ease, color .3s ease; }
+[data-font="klassiek"] .font-switch [data-font-option="klassiek"],
+[data-font="abbey"] .font-switch [data-font-option="abbey"] {
+  background: rgb(var(--c-primary-container)); color: rgb(var(--c-canvas-cream));
+}
+.font-switch [data-font-option] { -webkit-text-stroke: 0 !important; letter-spacing: normal !important; }
+.font-switch [data-font-option="klassiek"] { font-family: 'Newsreader', Georgia, serif !important; font-style: italic; }
+.font-switch [data-font-option="abbey"] { font-family: var(--font-abbey) !important; letter-spacing: .08em !important; }
