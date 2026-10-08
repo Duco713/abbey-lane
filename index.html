@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abbey Lane | Woonwinkel, Interieuradvies &amp; Styling Valkenswaard</title>
+<meta name="description" content="Abbey Lane is een sfeervolle woonwinkel in het centrum van Valkenswaard voor woonaccessoires, meubels, verf, behang en fashion. Persoonlijk interieuradvies en styling in de winkel of bij u thuis."/>
+<meta property="og:title" content="Abbey Lane | Woonwinkel, Interieuradvies &amp; Styling Valkenswaard"/>
+<meta property="og:description" content="Woonwinkel, interieuradvies, styling en fashion in Valkenswaard."/>
+<meta property="og:image" content="images/hero.jpg"/>
+<meta property="og:type" content="website"/>
+<meta name="theme-color" content="#FDFBF8"/>
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+<script>
+  // Kleurthema direct zetten (voorkomt flitsen): 'licht' of 'roze'
+  (function(){var t='licht';try{t=localStorage.getItem('al-theme')||t}catch(e){}
+  if(t!=='licht'&&t!=='roze')t='licht';document.documentElement.dataset.theme=t;})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha-value>)","surface-container-lowest":"rgb(var(--c-surface-container-lowest) / <alpha-value>)","surface-container-low":"rgb(var(--c-surface-container-low) / <alpha-value>)","surface-container":"rgb(var(--c-surface-container) / <alpha-value>)","surface-container-high":"rgb(var(--c-surface-container-high) / <alpha-value>)","surface-container-highest":"rgb(var(--c-surface-container-highest) / <alpha-value>)","surface-plaster":"rgb(var(--c-surface-plaster) / <alpha-value>)","surface-taupe":"rgb(var(--c-surface-taupe) / <alpha-value>)","surface-dim":"rgb(var(--c-surface-dim) / <alpha-value>)","primary":"rgb(var(--c-primary) / <alpha-value>)","primary-container":"rgb(var(--c-primary-container) / <alpha-value>)","on-primary":"rgb(var(--c-on-primary) / <alpha-value>)","secondary":"rgb(var(--c-secondary) / <alpha-value>)","secondary-container":"rgb(var(--c-secondary-container) / <alpha-value>)","on-surface":"rgb(var(--c-on-surface) / <alpha-value>)","on-surface-variant":"rgb(var(--c-on-surface-variant) / <alpha-value>)","clay-terracotta":"rgb(var(--c-clay-terracotta) / <alpha-value>)","canvas-cream":"rgb(var(--c-canvas-cream) / <alpha-value>)","espresso-deep":"rgb(var(--c-espresso-deep) / <alpha-value>)","espresso-text":"rgb(var(--c-espresso-text) / <alpha-value>)","border-hairline":"rgb(var(--c-border-hairline) / <alpha-value>)","olive-khaki":"rgb(var(--c-olive-khaki) / <alpha-value>)","outline-variant":"rgb(var(--c-outline-variant) / <alpha-value>)","error":"rgb(var(--c-error) / <alpha-value>)","gold":"rgb(var(--c-gold) / <alpha-value>)"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"gutter-desktop":"2.5rem","margin-desktop":"4rem","space-2xl":"5rem","space-md":"1rem",gutter:"1.5rem","space-xs":"0.25rem","space-lg":"1.75rem",margin:"1.25rem","margin-tablet":"2.5rem","space-xl":"3rem","space-sm":"0.5rem"},fontFamily:{sans:["Hanken Grotesk","system-ui","sans-serif"],serif:["Newsreader","Georgia","serif"],"headline-lg":["Newsreader"],"label-md":["Hanken Grotesk"],"display-hero-mobile":["Newsreader"],"body-lg":["Hanken Grotesk"],"headline-sm":["Newsreader"],"headline-md":["Newsreader"],"label-caps":["Hanken Grotesk"],"headline-lg-mobile":["Newsreader"],"body-sm":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"display-hero":["Newsreader"]},fontSize:{"headline-lg":["3rem",{lineHeight:"1.15",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["0.875rem",{lineHeight:"1.4",letterSpacing:"0.01em",fontWeight:"500"}],"display-hero-mobile":["2.75rem",{lineHeight:"1.15",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.65",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["1.5rem",{lineHeight:"1.35",letterSpacing:"0",fontWeight:"400"}],"headline-md":["2rem",{lineHeight:"1.25",letterSpacing:"-0.01em",fontWeight:"400"}],"label-caps":["0.6875rem",{lineHeight:"1.3",letterSpacing:"0.12em",fontWeight:"600"}],"headline-lg-mobile":["2rem",{lineHeight:"1.25",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["0.8125rem",{lineHeight:"1.5",letterSpacing:"0.01em",fontWeight:"400"}],"body-md":["0.9375rem",{lineHeight:"1.6",letterSpacing:"0",fontWeight:"400"}],"display-hero":["4.5rem",{lineHeight:"1.08",letterSpacing:"-0.025em",fontWeight:"400"}]}}}};
+</script>
+<style>
+  /* ===== Kleurthema's – afgeleid van het Abbey Lane logo (goud #987A3C, blush #F2DFD8, wit) ===== */
+  :root,[data-theme="licht"]{
+    --c-surface:253 251 248; --c-surface-container-lowest:255 255 255; --c-surface-container-low:250 246 241;
+    --c-surface-container:245 239 231; --c-surface-container-high:240 233 223; --c-surface-container-highest:234 226 214;
+    --c-surface-plaster:244 238 230; --c-surface-taupe:233 224 211; --c-surface-dim:227 218 205;
+    --c-primary:46 36 24; --c-primary-container:63 50 32; --c-on-primary:255 255 255;
+    --c-secondary:122 100 64; --c-secondary-container:239 227 204;
+    --c-on-surface:35 28 20; --c-on-surface-variant:90 79 68;
+    --c-clay-terracotta:140 111 52; --c-gold:152 122 60;
+    --c-canvas-cream:255 253 250; --c-espresso-deep:42 33 23; --c-espresso-text:63 50 32;
+    --c-border-hairline:230 220 207; --c-olive-khaki:108 102 76; --c-outline-variant:214 203 188; --c-error:186 26 26;
+  }
+  [data-theme="roze"]{
+    --c-surface:248 236 231; --c-surface-container-lowest:255 250 248; --c-surface-container-low:246 231 225;
+    --c-surface-container:242 223 216; --c-surface-container-high:237 213 204; --c-surface-container-highest:231 204 194;
+    --c-surface-plaster:242 223 216; --c-surface-taupe:232 207 197; --c-surface-dim:226 198 187;
+    --c-primary:59 40 33; --c-primary-container:74 52 42; --c-on-primary:255 255 255;
+    --c-secondary:138 104 84; --c-secondary-container:245 222 214;
+    --c-on-surface:43 31 26; --c-on-surface-variant:106 80 72;
+    --c-clay-terracotta:124 97 42; --c-gold:152 122 60;
+    --c-canvas-cream:253 246 243; --c-espresso-deep:51 36 30; --c-espresso-text:74 52 42;
+    --c-border-hairline:227 201 191; --c-olive-khaki:108 102 76; --c-outline-variant:220 192 182; --c-error:186 26 26;
+  }
+  /* Zachte overgang tijdens wisselen van thema */
+  .theme-anim *,.theme-anim *::before,.theme-anim *::after{transition:background-color .5s ease,color .5s ease,border-color .5s ease,fill .5s ease!important}
+  /* Thema-schakelaar */
+  .theme-switch [data-theme-option]{transition:background-color .3s ease,color .3s ease}
+  [data-theme="licht"] .theme-switch [data-theme-option="licht"],
+  [data-theme="roze"] .theme-switch [data-theme-option="roze"]{background:rgb(var(--c-primary-container));color:rgb(var(--c-canvas-cream))}
+  html,body{margin:0;padding:0}
+  body{overscroll-behavior:none}
+  /* Ankers landen onder de vaste header */
+  section[id],div[id]{scroll-margin-top:7rem}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;line-height:1;user-select:none}
+  /* Mobiel: hotspots openen met een tik */
+  .hotspot.is-open .hotspot-card{opacity:1!important;--tw-translate-y:0px!important}
+  .hotspot.is-open .hotspot-tip{opacity:1!important}
+  /* Mobiel menu */
+  #mobile-menu{transition:opacity .25s ease,visibility .25s ease}
+  #mobile-menu:not(.is-open){opacity:0;visibility:hidden}
+  #mobile-menu .panel{transition:transform .3s ease}
+  #mobile-menu:not(.is-open) .panel{transform:translateX(100%)}
+  /* Portfolio filter */
+  .project{transition:opacity .3s ease}
+  .project.is-hidden{display:none}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  /* Headings in h1–h4 gebruiken lijn-hoogte van hun eigen class; voorkom heading-blauw van tel-links op iOS */
+  a[href^="tel"]{color:inherit;text-decoration:none}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-sans antialiased selection:bg-secondary-container selection:text-primary">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-full focus:bg-primary focus:text-canvas-cream">Naar inhoud</a>
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+  <div class="w-full bg-surface-container-high/70 py-space-xs text-center">
+    <div class="max-w-7xl mx-auto px-margin md:px-margin-desktop flex items-center justify-center gap-space-sm">
+      <span class="w-1.5 h-1.5 rounded-full bg-clay-terracotta shrink-0"></span>
+      <p class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant truncate">Woonwinkel &amp; interieuradvies<span class="hidden sm:inline"> • Eindhovenseweg 16, Valkenswaard</span></p>
+    </div>
+  </div>
+  <div class="h-20 w-full px-margin md:px-margin-tablet xl:px-12 flex items-center justify-between gap-space-md">
+    <div class="xl:flex-1 flex items-center">
+      <a class="block shrink-0" href="#top" aria-label="Abbey Lane – naar boven">
+        <img src="images/logo-wordmark-tagline.png" alt="Abbey Lane – Interior, Styling &amp; Fashion" class="h-9 sm:h-10 w-auto" width="170" height="40"/>
+      </a>
+    </div>
+    <nav class="hidden xl:flex shrink-0 justify-center items-center gap-6 whitespace-nowrap" aria-label="Hoofdmenu">
+      <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#over-ons">Over Ons</a>
+      <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#diensten-advies">Diensten &amp; Advies</a>
+      <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#maatwerk-banken">Eigen Label</a>
+      <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#portfolio">Portfolio</a>
+      <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#merken">Merken</a>
+      <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#contact">Contact</a>
+    </nav>
+    <div class="xl:flex-1 flex items-center justify-end gap-space-md shrink-0">
+      <div class="theme-switch hidden md:flex items-center gap-0.5 p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Kleurthema">
+        <button type="button" data-theme-option="licht" class="w-7 h-7 rounded-full flex items-center justify-center" aria-label="Licht thema" title="Licht"><span class="w-3 h-3 rounded-full bg-white ring-1 ring-gold/60"></span></button>
+        <button type="button" data-theme-option="roze" class="w-7 h-7 rounded-full flex items-center justify-center" aria-label="Roze thema" title="Roze"><span class="w-3 h-3 rounded-full bg-[#F2DFD8] ring-1 ring-gold/60"></span></button>
+      </div>
+      <a class="hidden lg:flex xl:hidden 2xl:flex items-center gap-space-xs whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="tel:+31408429365">
+        <span class="material-symbols-outlined text-[18px] text-secondary">call</span><span>040-8429365</span>
+      </a>
+      <a class="hidden sm:inline-flex items-center gap-space-xs whitespace-nowrap px-space-lg py-space-sm rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all duration-200 shadow-[0_1px_6px_rgba(33,21,15,0.08)]" href="#contact">
+        <span>Boek Interieuradvies</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
+      <button id="menu-open" type="button" class="xl:hidden w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center" aria-label="Menu openen" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="material-symbols-outlined text-[20px]">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBIEL MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-[55] xl:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="absolute inset-0 bg-espresso-deep/50 backdrop-blur-sm" data-menu-close></div>
+  <div class="panel absolute top-0 right-0 bottom-0 w-[85%] max-w-sm bg-surface shadow-2xl flex flex-col p-space-lg">
+    <div class="flex items-center justify-between pb-space-lg border-b border-border-hairline">
+      <img src="images/logo-wordmark.png" alt="Abbey Lane" class="h-4 w-auto"/>
+      <button type="button" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary" aria-label="Menu sluiten" data-menu-close>
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col py-space-lg gap-space-xs" aria-label="Mobiel menu">
+      <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#over-ons" data-menu-close>Over Ons</a>
+      <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#diensten-advies" data-menu-close>Diensten &amp; Advies</a>
+      <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#maatwerk-banken" data-menu-close>Eigen Label</a>
+      <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#portfolio" data-menu-close>Portfolio</a>
+      <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#merken" data-menu-close>Merken</a>
+      <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#contact" data-menu-close>Contact</a>
+    </nav>
+    <div class="mt-auto space-y-space-sm">
+      <div class="theme-switch flex items-center p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Kleurthema">
+        <button type="button" data-theme-option="licht" class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-white ring-1 ring-gold/60"></span>Licht</button>
+        <button type="button" data-theme-option="roze" class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-[#F2DFD8] ring-1 ring-gold/60"></span>Roze</button>
+      </div>
+      <a class="flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md" href="#contact" data-menu-close>
+        <span>Boek Interieuradvies</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
+      <a class="flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-full bg-surface-container text-primary font-label-md text-label-md" href="tel:+31408429365">
+        <span class="material-symbols-outlined text-[18px]">call</span><span>040-8429365</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<main id="main" class="w-full pt-20 bg-surface"><div id="top" class="flex flex-col w-full">
+
+<!-- HERO -->
+<section class="relative w-full overflow-hidden bg-surface-container-high -mt-20">
+  <div class="relative w-full min-h-[100svh] md:min-h-[860px] flex items-end pt-40 pb-space-2xl px-margin md:px-margin-desktop">
+    <div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Warm Mediterraans interieur met linnen bank, travertin salontafel en handgedraaid keramiek" style="background-image:url('images/hero.jpg')"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/40 to-transparent"></div>
+    <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+
+    <div class="relative z-10 max-w-4xl space-y-space-lg text-canvas-cream">
+      <div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-canvas-cream/15 backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-clay-terracotta"></span>
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-canvas-cream">Interior, Styling &amp; Fashion • Valkenswaard</span>
+      </div>
+      <h1 class="font-display-hero text-display-hero-mobile md:text-display-hero leading-tight text-canvas-cream tracking-tight max-w-3xl">
+        Interieurs met karakter. <br class="hidden sm:inline"/>
+        <span class="italic font-display-hero font-normal text-secondary-container">Ruimtes die verhalen vertellen.</span>
+      </h1>
+      <p class="font-body-lg text-body-lg text-surface-container-high/90 max-w-2xl font-light leading-relaxed">
+        Sfeervolle woonwinkel in het centrum van Valkenswaard. Voor woonaccessoires, meubels, krijt- en kalkverf, behang én fashion — en voor persoonlijk interieuradvies en styling, in de winkel of bij u thuis.
+      </p>
+      <div class="pt-space-md flex flex-wrap items-center gap-space-md">
+        <a class="px-space-xl py-space-md rounded-full bg-canvas-cream text-espresso-deep font-label-md text-label-md hover:bg-secondary-container transition-all duration-300 shadow-md flex items-center gap-space-sm group" href="#contact">
+          <span>Boek Interieuradvies</span><span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+        <a class="px-space-xl py-space-md rounded-full bg-transparent text-canvas-cream font-label-md text-label-md ring-1 ring-canvas-cream/30 hover:bg-canvas-cream/10 transition-all duration-300 flex items-center gap-space-sm backdrop-blur-sm" href="#portfolio">
+          <span>Ontdek Ons Portfolio</span><span class="material-symbols-outlined text-[18px]">south_east</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILOSOFIE -->
+<section class="w-full bg-surface-container-low py-space-2xl px-margin md:px-margin-desktop">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+    <div class="lg:col-span-8 space-y-space-md">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Onze Filosofie • Abbey Lane</span>
+      <blockquote class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight font-normal">
+        “We don’t need every piece to agree. <br class="hidden md:inline"/>
+        <span class="italic text-secondary">It just needs enough character to hold its own.”</span>
+      </blockquote>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+        Een huis is geen showroom, maar een persoonlijk toevluchtsoord vol tastbare herinneringen, warme imperfecties en tactiele rust. In onze winkel in Valkenswaard mixen we vintage vondsten, ambachtelijk maatwerk en vooruitstrevende designcollecties tot een harmonieus, bezield geheel.
+      </p>
+    </div>
+    <div class="lg:col-span-4 flex flex-col justify-end lg:items-end space-y-space-md">
+      <div class="p-space-lg rounded bg-surface-plaster shadow-sm max-w-sm w-full space-y-space-sm">
+        <div class="flex items-center gap-space-sm text-clay-terracotta">
+          <span class="material-symbols-outlined text-[22px]">storefront</span>
+          <span class="font-label-caps text-label-caps uppercase tracking-wider">De Winkel</span>
+        </div>
+        <p class="font-headline-sm text-headline-sm text-primary">Kom langs bij Abbey Lane</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">In het centrum van Valkenswaard vindt u woonaccessoires, meubels, kleding, tassen, sieraden, krijt- en kalkverf en behang. De collectie wordt dagelijks aangevuld met nieuwe items.</p>
+        <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary font-semibold hover:text-clay-terracotta transition-colors pt-space-xs" href="#contact">
+          <span>Openingstijden &amp; adres</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 SFEER-TEGELS -->
+<section class="w-full bg-surface py-space-xl px-margin md:px-margin-desktop">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+      <div>
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Sferen • Collecties</span>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-space-xs">Puurheid, Materiaal &amp; Balans</h2>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Elke hoek in huis verdient bezieling. Bekijk hoe wij texturen samenbrengen in onze residentiële projecten.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      <a href="#diensten-advies" class="group relative rounded overflow-hidden bg-surface-container aspect-[3/4] flex flex-col justify-end p-space-lg shadow-sm">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" role="img" aria-label="Handgemaakt keramiek op een eiken eettafel" style="background-image:url('images/tafelen.jpg')"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/80 via-espresso-deep/20 to-transparent"></div>
+        <div class="relative z-10 flex items-center justify-between gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-canvas-cream font-medium">Tafelen &amp; Keuken</span>
+          <span class="px-space-md py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-deep font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-space-xs group-hover:bg-canvas-cream transition-colors">Ontdek<span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+        </div>
+      </a>
+      <a href="#maatwerk-banken" class="group relative rounded overflow-hidden bg-surface-container aspect-[3/4] flex flex-col justify-end p-space-lg shadow-sm">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" role="img" aria-label="Maatwerk notenhouten kasten en een gestucte nis met aardewerk" style="background-image:url('images/maatwerk.jpg')"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/80 via-espresso-deep/20 to-transparent"></div>
+        <div class="relative z-10 flex items-center justify-between gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-canvas-cream font-medium">Bespoke Maatwerk</span>
+          <span class="px-space-md py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-deep font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-space-xs group-hover:bg-canvas-cream transition-colors">Bekijk<span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+        </div>
+      </a>
+      <a href="#maatwerk-banken" class="group relative rounded overflow-hidden bg-surface-container aspect-[3/4] flex flex-col justify-end p-space-lg shadow-sm">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" role="img" aria-label="Maatwerk bank in jacquard en bouclé voor een olijfgroene wand" style="background-image:url('images/banken.jpg')"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/80 via-espresso-deep/20 to-transparent"></div>
+        <div class="relative z-10 flex items-center justify-between gap-space-sm">
+          <span class="font-headline-sm text-headline-sm text-canvas-cream font-medium">Banken &amp; Textiel</span>
+          <span class="px-space-md py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-deep font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-space-xs group-hover:bg-canvas-cream transition-colors">Ervaar<span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INTERACTIEF PANORAMA -->
+<section class="w-full bg-surface-container-high py-space-2xl px-margin md:px-margin-desktop">
+  <div class="max-w-7xl mx-auto space-y-space-lg">
+    <div class="max-w-3xl">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Living Vignette • Residentie Valkenswaard</span>
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-space-xs">Laat ons u begeleiden in de kunst van bezield wonen.</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">Voor woningen die weigeren te lijken op al het andere. Klik op de tactiele markeringen om de geselecteerde materialen en meubels van dit project te verkennen.</p>
+    </div>
+    <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] rounded shadow-lg bg-surface-dim">
+      <div class="absolute inset-0 rounded overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Zonnige woonkamer met modulaire botanische bank, spiegelglazen salontafel en salie dressoir" style="background-image:url('images/panorama.jpg')"></div>
+        <div class="absolute inset-0 bg-espresso-deep/15"></div>
+      </div>
+
+      <div class="hotspot absolute top-[58%] left-[22%] group z-20">
+        <div class="relative flex items-center justify-center">
+          <span class="w-7 h-7 rounded-full bg-canvas-cream/40 animate-ping absolute"></span>
+          <button type="button" aria-label="Details sofa" class="hotspot-btn w-6 h-6 rounded-full bg-canvas-cream shadow-md flex items-center justify-center transition-transform group-hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-terracotta"><span class="w-2 h-2 rounded-full bg-clay-terracotta"></span></button>
+          <div class="hotspot-card absolute bottom-9 left-0 sm:left-1/2 -translate-x-[15%] sm:-translate-x-1/2 w-56 sm:w-64 p-space-sm rounded bg-canvas-cream/95 backdrop-blur-md shadow-xl text-espresso-deep opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-30">
+            <p class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Maatwerk Abbey Lane</p>
+            <p class="font-headline-sm text-[1.15rem] leading-tight font-medium mt-1">Loungebank ‘Corridor’</p>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Gestoffeerd in handbedrukt botanical linnen blend. Modulair en op maat geproduceerd.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hotspot absolute top-[68%] left-[64%] group z-20">
+        <div class="relative flex items-center justify-center">
+          <span class="w-7 h-7 rounded-full bg-canvas-cream/40 animate-ping absolute"></span>
+          <button type="button" aria-label="Details salontafel" class="hotspot-btn w-6 h-6 rounded-full bg-canvas-cream shadow-md flex items-center justify-center transition-transform group-hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-terracotta"><span class="w-2 h-2 rounded-full bg-secondary"></span></button>
+          <div class="hotspot-card absolute bottom-9 left-1/2 -translate-x-[70%] sm:-translate-x-1/2 w-56 sm:w-64 p-space-sm rounded bg-canvas-cream/95 backdrop-blur-md shadow-xl text-espresso-deep opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-30">
+            <p class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Collectie Sourcing</p>
+            <p class="font-headline-sm text-[1.15rem] leading-tight font-medium mt-1">Messing &amp; Glas Salontafel</p>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">HKliving archiefstuk gecombineerd met handgevormde schalen van geel keramiek.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hotspot absolute top-[32%] right-[24%] group z-20">
+        <div class="relative flex items-center justify-center">
+          <span class="w-7 h-7 rounded-full bg-canvas-cream/40 animate-ping absolute"></span>
+          <button type="button" aria-label="Details verfafwerking" class="hotspot-btn w-6 h-6 rounded-full bg-canvas-cream shadow-md flex items-center justify-center transition-transform group-hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-terracotta"><span class="w-2 h-2 rounded-full bg-primary"></span></button>
+          <div class="hotspot-card absolute top-9 sm:top-auto sm:bottom-9 right-0 w-56 sm:w-64 p-space-sm rounded bg-canvas-cream/95 backdrop-blur-md shadow-xl text-espresso-deep opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-30">
+            <p class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Kleur &amp; Textuurplan</p>
+            <p class="font-headline-sm text-[1.15rem] leading-tight font-medium mt-1">Mia Colore Kalkverf</p>
+            <p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Tint ‘Sabbia Calda’ met zachte wolkstructuur voor een zinderende lichtinval.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-space-md left-space-md right-space-md flex items-center justify-between text-canvas-cream/90 pointer-events-none">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest hidden sm:inline">Project: Residentie ‘De Kempen’ • Totaalinrichting</span>
+        <span class="font-label-caps text-label-caps uppercase tracking-wider bg-espresso-deep/60 px-space-sm py-space-xs rounded-full backdrop-blur-sm">Ontwerp &amp; Styling: Abbey Lane</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIENSTEN & ADVIES -->
+<section class="w-full bg-surface py-space-2xl px-margin md:px-margin-desktop" id="diensten-advies">
+  <div class="max-w-7xl mx-auto space-y-space-2xl">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md border-b border-border-hairline pb-space-lg">
+      <div>
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Advies &amp; Styling • Valkenswaard</span>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-space-xs leading-tight">De Kunst van Bezield Wonen:<br/><span class="italic text-secondary">Drie Adviesformules</span></h2>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed">Een goede balans tussen indeling, kleur, licht en materiaal zorgt voor een interieur waar u goed kunt wonen en werken. Met aandacht voor bestaande elementen geven we uw woning een karakter dat aansluit op uw woonwensen.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+      <div class="lg:col-span-7 space-y-space-xl">
+        <!-- 01 -->
+        <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-container-low hover:bg-surface-plaster transition-all duration-300 border border-border-hairline/60 shadow-sm">
+          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span class="font-serif text-[1.4rem] text-clay-terracotta">01</span>
+              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">In Onze Winkel</span>
+            </div>
+            <div class="sm:text-right">
+              <span class="font-serif text-[1.2rem] text-primary italic">€ 79,-</span>
+              <span class="block font-label-caps text-[9px] text-secondary uppercase">Incl. cadeaubon t.w.v. € 79</span>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Advies in de Winkel</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Een kort advies tot 30 minuten is altijd gratis — loop gerust binnen. Voor een uitgebreid advies van 1 tot 1,5 uur nemen we samen uw ruimte, foto's en wensen door en leggen we kleurstalen, behang en stoffen naast elkaar. Na afloop ontvangt u een cadeaubon van € 79, geldig op de gehele collectie.</p>
+          <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">check</span>Kort advies gratis</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">schedule</span>1 – 1,5 uur</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">redeem</span>Cadeaubon € 79</span>
+          </div>
+          <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary font-semibold hover:text-clay-terracotta transition-colors group-hover:translate-x-1 duration-200" href="#contact" data-service="tier-01"><span>Plan Advies in de Winkel</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+        <!-- 02 -->
+        <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-plaster hover:bg-surface-container transition-all duration-300 border-2 border-clay-terracotta/30 shadow-md">
+          <div class="absolute -top-3 right-space-lg px-space-md py-space-xs rounded-full bg-clay-terracotta text-canvas-cream font-label-caps text-[10px] uppercase tracking-widest">Meest Gekozen</div>
+          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span class="font-serif text-[1.4rem] text-clay-terracotta">02</span>
+              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Bij U Thuis of op Locatie</span>
+            </div>
+            <div class="sm:text-right">
+              <span class="font-serif text-[1.2rem] text-primary italic">€ 199,-</span>
+              <span class="block font-label-caps text-[9px] text-secondary uppercase">1 – 1,5 uur</span>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Advies aan Huis</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">We komen bij u thuis of op locatie en bekijken samen wat er aan uw woning of ruimte kan veranderen: welke sfeer en stijl het beste passen, en hoe indeling, kleur, licht en materiaal elkaar versterken. U ontvangt een korte samenvatting in de vorm van een sfeercollage.</p>
+          <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">dashboard</span>Sfeercollage</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">storefront</span>Gratis vervolgafspraak in de winkel</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">home_pin</span>Geen reiskosten binnen 10 km</span>
+          </div>
+          <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all shadow-sm" href="#contact" data-service="tier-02"><span>Plan Advies aan Huis</span><span class="material-symbols-outlined text-[16px]">calendar_today</span></a>
+        </div>
+        <!-- 03 -->
+        <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-container-low hover:bg-surface-plaster transition-all duration-300 border border-border-hairline/60 shadow-sm">
+          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span class="font-serif text-[1.4rem] text-clay-terracotta">03</span>
+              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Bij U Thuis of op Locatie</span>
+            </div>
+            <div class="sm:text-right">
+              <span class="font-serif text-[1.2rem] text-primary italic">€ 399,-</span>
+              <span class="block font-label-caps text-[9px] text-secondary uppercase">2 – 3 uur</span>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Styling aan Huis</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Wilt u snel resultaat? Tijdens de styling voeren we kleinere aanpassingen meteen door. Met accessoires, textiel en verlichting uit onze collectie geven we uw woning direct een andere uitstraling. Koopt u voor € 2.500 aan accessoires, dan brengen we de helft van de stylingkosten in mindering.</p>
+          <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">auto_awesome</span>Direct resultaat</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">light</span>Accessoires &amp; verlichting</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">percent</span>50% korting vanaf € 2.500</span>
+          </div>
+          <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary font-semibold hover:text-clay-terracotta transition-colors group-hover:translate-x-1 duration-200" href="#contact" data-service="tier-03"><span>Plan Styling aan Huis</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+        <!-- Goed om te weten -->
+        <div class="rounded p-space-lg bg-canvas-cream border border-border-hairline space-y-space-sm">
+          <div class="flex items-center gap-space-xs text-clay-terracotta"><span class="material-symbols-outlined text-[18px]">info</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Goed om te weten</span></div>
+          <ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-disc pl-5">
+            <li>Wenst u een uitgebreider gesprek of styling? Dat kan natuurlijk; extra tijd rekenen we af à € 19 per 15 minuten.</li>
+            <li>De uren die wij berekenen zijn inclusief voorbereiding en afronding.</li>
+            <li>Advies of styling aan huis buiten een straal van 10 km: reiskosten op aanvraag.</li>
+            <li>De stempelkaart is niet geldig op meubelen, verf, behang en advieskosten.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Moodboard --><!-- Moodboard -->
+      <div class="lg:col-span-5 relative">
+        <div class="lg:sticky lg:top-32 bg-canvas-cream p-space-lg rounded border border-border-hairline shadow-lg space-y-space-md">
+          <div class="flex items-center justify-between gap-space-sm border-b border-border-hairline pb-space-sm">
+            <div class="flex items-center gap-space-xs text-clay-terracotta">
+              <span class="material-symbols-outlined text-[20px]">dashboard</span>
+              <span class="font-label-caps text-label-caps uppercase tracking-wider">Atelier Moodboard No. 04</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-secondary uppercase text-right">Residentie De Kempen</span>
+          </div>
+          <div class="relative aspect-[4/3] rounded overflow-hidden shadow-inner bg-surface-taupe">
+            <div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Moodboard met keramiek, stalen en natuurlijke materialen" style="background-image:url('images/tafelen.jpg')"></div>
+            <div class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 backdrop-blur-sm rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Sfeercollage</div>
+          </div>
+          <div>
+            <p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary mb-space-xs">Tactiele Curatie:</p>
+            <div class="grid grid-cols-2 gap-space-xs">
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-clay-terracotta shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Terracotta Krijt</span><span class="text-[9px] text-on-surface-variant">Mia Colore Calda</span></div></div>
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-surface-taupe border border-border-hairline shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Linnen Weefsel</span><span class="text-[9px] text-on-surface-variant">Meubelstoffering</span></div></div>
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-olive-khaki shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Salie &amp; Olive</span><span class="text-[9px] text-on-surface-variant">Velours Touch</span></div></div>
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-espresso-deep shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Gerookt Eiken</span><span class="text-[9px] text-on-surface-variant">Mat Gelakt Bespoke</span></div></div>
+            </div>
+          </div>
+          <div class="p-space-sm rounded bg-secondary-container/40 border border-secondary-container flex items-center justify-between gap-space-xs">
+            <div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px] text-clay-terracotta">verified</span><span class="font-label-caps text-[11px] uppercase tracking-wider">Kleurstalen in de Winkel</span></div>
+            <span class="text-body-sm text-secondary font-serif italic">Valkenswaard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Werkwijze -->
+    <div class="bg-surface-plaster rounded p-space-lg sm:p-space-xl border border-border-hairline shadow-sm space-y-space-xl">
+      <div class="text-center max-w-2xl mx-auto space-y-space-xs">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Onze Werkwijze</span>
+        <h3 class="font-headline-md text-headline-md text-primary">Van Woonwens naar Interieur</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Een goed interieuradvies bestaat uit meer dan de inrichting van uw woning.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="bg-surface rounded p-space-lg border border-border-hairline shadow-sm space-y-space-sm">
+          <div class="w-10 h-10 rounded-full bg-surface-taupe text-primary flex items-center justify-center font-serif text-[1.2rem] font-medium">1</div>
+          <h4 class="font-serif text-[1.2rem] text-primary">Woonwensen &amp; Sfeer</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">We kijken naar uw woonwensen, de bestaande interieurelementen en de mensen die de ruimtes gebruiken. Samen bepalen we welke sfeer en stijl het beste bij uw huis passen.</p>
+          <span class="font-label-caps text-[10px] text-clay-terracotta uppercase tracking-wider block pt-space-xs">Stap 01 • Kennismaken</span>
+        </div>
+        <div class="bg-surface rounded p-space-lg border border-border-hairline shadow-sm space-y-space-sm">
+          <div class="w-10 h-10 rounded-full bg-surface-taupe text-primary flex items-center justify-center font-serif text-[1.2rem] font-medium">2</div>
+          <h4 class="font-serif text-[1.2rem] text-primary">Kleur, Materiaal &amp; Licht</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Kleur en materiaal bepalen de sfeer: wandafwerking, vloer, raambekleding en meubelstoffering. En verlichting, vaak vergeten, laat een ruimte groter lijken en zet de toon. We visualiseren met foto's, kleurstalen en stoffen.</p>
+          <span class="font-label-caps text-[10px] text-clay-terracotta uppercase tracking-wider block pt-space-xs">Stap 02 • Advies</span>
+        </div>
+        <div class="bg-surface rounded p-space-lg border border-border-hairline shadow-sm space-y-space-sm">
+          <div class="w-10 h-10 rounded-full bg-surface-taupe text-primary flex items-center justify-center font-serif text-[1.2rem] font-medium">3</div>
+          <h4 class="font-serif text-[1.2rem] text-primary">Styling &amp; Resultaat</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Abbey Lane streeft naar resultaat: kleinere aanpassingen voeren we meteen door. Met meubels, accessoires, verf en behang uit onze collectie maakt u het plan compleet.</p>
+          <span class="font-label-caps text-[10px] text-clay-terracotta uppercase tracking-wider block pt-space-xs">Stap 03 • Thuiskomen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded bg-espresso-deep text-canvas-cream p-space-lg sm:p-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-lg shadow-xl">
+      <div class="space-y-space-xs max-w-xl">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Persoonlijke Kennismaking</span>
+        <h4 class="font-headline-md text-headline-md text-canvas-cream">Afspraak maken?</h4>
+        <p class="font-body-md text-body-md text-surface-container-highest/80">Mail ons mogelijke data en tijdstippen via interieuradvies@abbeylane.nl, bel ons, of vul het formulier in. Voor een kort advies kunt u gewoon binnenlopen.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-space-sm shrink-0">
+        <a class="px-space-xl py-space-md rounded-full bg-canvas-cream text-espresso-deep font-label-md text-label-md hover:bg-secondary-container transition-all flex items-center gap-space-xs shadow-md" href="#contact"><span>Plan Uw Interieuradvies</span><span class="material-symbols-outlined text-[18px]">calendar_today</span></a>
+        <a class="px-space-lg py-space-md rounded-full bg-canvas-cream/10 text-canvas-cream hover:bg-canvas-cream/20 font-label-md text-label-md transition-all flex items-center gap-space-xs" href="tel:+31408429365"><span class="material-symbols-outlined text-[18px]">call</span><span>040-8429365</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAATWERK BANKEN -->
+<section class="w-full bg-surface-plaster py-space-2xl px-margin md:px-margin-desktop" id="maatwerk-banken">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl lg:gap-gutter-desktop items-center">
+      <div class="lg:col-span-6 relative">
+        <div class="relative rounded overflow-hidden aspect-[4/5] bg-surface-taupe shadow-md">
+          <div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Detail van een gebogen maatwerk bank in terracotta en havermout bouclé" style="background-image:url('images/sofa.jpg')"></div>
+        </div>
+        <div class="hidden sm:block absolute -bottom-6 -right-6 p-space-md rounded bg-canvas-cream shadow-xl max-w-xs space-y-1 border border-border-hairline">
+          <div class="flex items-center gap-space-xs text-clay-terracotta font-label-caps text-label-caps uppercase"><span class="material-symbols-outlined text-[16px]">verified</span><span>Eigen Label • Abbey Lane</span></div>
+          <p class="font-serif text-[1.1rem] text-espresso-text font-medium leading-tight">Zelf Samengesteld</p>
+          <p class="font-body-sm text-[12px] text-on-surface-variant">In de maat, stof en kleur die bij uw interieur passen.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-6 space-y-space-lg">
+        <div class="space-y-space-xs">
+          <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Eigen Label • Abbey Lane</span>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight">Zitmeubelen op Maat:<br/><span class="italic text-secondary">Vormgegeven Rond Uw Leven</span></h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant pt-space-xs leading-relaxed">Een bank is het hart van het huis. Naast de merken in onze winkel hebben we daarom een eigen label met zitmeubelen. De zitmeubelen die we onder de naam Abbey Lane aanbieden stelt u zelf samen in maat, stof en kleur — zodat ze precies passen bij uw ruimte en uw interieur.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+          <div class="p-space-md rounded bg-surface-container space-y-space-xs border border-border-hairline/60"><div class="w-8 h-8 rounded-full bg-surface-taupe flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">straighten</span></div><h4 class="font-serif text-[1.15rem] text-primary">Uw Maat</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Afgestemd op uw ruimte en op hoe u wilt zitten.</p></div>
+          <div class="p-space-md rounded bg-surface-container space-y-space-xs border border-border-hairline/60"><div class="w-8 h-8 rounded-full bg-surface-taupe flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">texture</span></div><h4 class="font-serif text-[1.15rem] text-primary">Uw Stof</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Kies de stof die past bij het gebruik en de sfeer van uw interieur.</p></div>
+          <div class="p-space-md rounded bg-surface-container space-y-space-xs border border-border-hairline/60"><div class="w-8 h-8 rounded-full bg-surface-taupe flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">palette</span></div><h4 class="font-serif text-[1.15rem] text-primary">Uw Kleur</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Een kleur die aansluit op uw wanden, vloer en accessoires.</p></div>
+          <div class="p-space-md rounded bg-surface-container space-y-space-xs border border-border-hairline/60"><div class="w-8 h-8 rounded-full bg-surface-taupe flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">storefront</span></div><h4 class="font-serif text-[1.15rem] text-primary">Advies in de Winkel</h4><p class="font-body-sm text-body-sm text-on-surface-variant">We helpen u kiezen en combineren met stalen en stoffen in de winkel.</p></div>
+        </div>
+        <div class="pt-space-sm flex flex-wrap items-center gap-space-md">
+          <a class="px-space-xl py-space-md rounded-full bg-espresso-text text-canvas-cream font-label-md text-label-md hover:bg-clay-terracotta transition-all shadow-md flex items-center gap-space-xs" href="#contact" data-service="maatwerk-bank"><span>Vraag naar ons Eigen Label</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+          <a class="font-label-md text-label-md text-primary font-semibold hover:text-clay-terracotta transition-colors flex items-center gap-space-xs" href="tel:+31408429365"><span class="material-symbols-outlined text-[18px] text-secondary">call</span><span>Bel de winkel: 040-8429365</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="w-full bg-surface py-space-2xl px-margin md:px-margin-desktop" id="portfolio">
+  <div class="max-w-7xl mx-auto space-y-space-xl">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+      <div>
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Gerealiseerde Ruimtes</span>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-space-xs">Portfolio &amp; Projecten</h2>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Een selectie van recente interieurs in de regio Valkenswaard, Eindhoven en de Brabantse Kempen.</p>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-space-xs pb-space-sm" role="group" aria-label="Filter projecten">
+      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="alle" aria-pressed="true">Alle Projecten</button>
+      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="villa" aria-pressed="false">Totaalinrichting Villa</button>
+      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="kleur" aria-pressed="false">Kleur- &amp; Behangplan</button>
+      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="appartement" aria-pressed="false">Boutique Appartement</button>
+      <button type="button" class="filter-chip px-space-md py-space-xs rounded-full font-label-caps text-label-caps uppercase tracking-wider transition-colors" data-filter="maatwerk" aria-pressed="false">Maatwerk Meubilair</button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop" id="portfolio-grid">
+      <article class="project lg:col-span-7 group space-y-space-sm" data-category="villa">
+        <div class="rounded overflow-hidden aspect-[16/10] bg-surface-taupe relative shadow-sm">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Open villa woonkamer met kalkstenen vloer en gerookt eiken maatwerk" style="background-image:url('images/villa.jpg')"></div>
+          <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Valkenswaard • 2025</span></div>
+        </div>
+        <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
+          <div>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Villa De Dommel</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Totaalinrichting • Warm minimalistisch familiehuis met aardetinten en maatwerk hout</p>
+          </div>
+          <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
+        </div>
+      </article>
+      <article class="project lg:col-span-5 group space-y-space-sm" data-category="kleur">
+        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[16/14] bg-surface-taupe relative shadow-sm">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Eetsalon met flessengroene kalkwanden en fluwelen stoelen" style="background-image:url('images/herenhuis.jpg')"></div>
+          <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Valkenswaard Centrum</span></div>
+        </div>
+        <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
+          <div>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Herenhuis Valkenswaard</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Kleuradvies • Statement behang van Arte en rijke velours texturen</p>
+          </div>
+          <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
+        </div>
+      </article>
+      <article class="project lg:col-span-5 group space-y-space-sm" data-category="appartement">
+        <div class="rounded overflow-hidden aspect-[4/3] lg:aspect-[16/14] bg-surface-taupe relative shadow-sm">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Industriële loft met baksteen en zachte modulaire banken" style="background-image:url('images/loft.jpg')"></div>
+          <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Kempen Loft</span></div>
+        </div>
+        <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
+          <div>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Loft Brabant</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Meubilering • Industrieel meets zacht linnen met retro keramiek accenten</p>
+          </div>
+          <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
+        </div>
+      </article>
+      <article class="project lg:col-span-7 group space-y-space-sm" data-category="maatwerk">
+        <div class="rounded overflow-hidden aspect-[16/10] bg-surface-taupe relative shadow-sm">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label="Stadswoning met terracotta maatwerk hoekbank en eiken boekenkast" style="background-image:url('images/stadswoning.jpg')"></div>
+          <div class="absolute inset-0 bg-espresso-deep/10 group-hover:bg-transparent transition-colors"></div>
+          <div class="absolute top-space-md left-space-md"><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream/90 backdrop-blur-md text-espresso-text font-label-caps text-label-caps uppercase">Eindhoven Regio</span></div>
+        </div>
+        <div class="flex items-baseline justify-between gap-space-sm pt-space-xs">
+          <div>
+            <h3 class="font-headline-md text-headline-md text-primary group-hover:text-clay-terracotta transition-colors">Stadswoning Eindhoven</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Maatwerk • Terracotta accenten, maatwerk hoekbank en asymmetrische kunst</p>
+          </div>
+          <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="w-full bg-surface-container-low py-space-2xl px-margin md:px-margin-desktop" id="over-ons">
+  <div class="max-w-7xl mx-auto space-y-space-xl">
+    <div class="max-w-3xl space-y-space-xs">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Passie • Vakkennis</span>
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">De Gezichten Achter Abbey Lane</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Gedreven door liefde voor architectuur, kunstgeschiedenis en tactiele materialen. In onze winkel in Valkenswaard werken we zij aan zij aan uw droominterieur.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      <div class="bg-surface rounded overflow-hidden p-space-md shadow-sm space-y-space-md">
+        <div class="aspect-[4/5] rounded overflow-hidden relative bg-surface-taupe"><div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Portret van Anouk van Beek" style="background-image:url('images/team-anouk.jpg')"></div></div>
+        <div class="space-y-space-xs">
+          <span class="font-label-caps text-label-caps uppercase text-clay-terracotta">Oprichter &amp; Interieurarchitect</span>
+          <h3 class="font-headline-md text-[1.4rem] text-primary">Anouk van Beek</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Specialisatie: Ruimtelijke indelingen, zichtlijnen en de naadloze symbiose tussen architectuur en leefgewoonten.</p>
+        </div>
+      </div>
+      <div class="bg-surface rounded overflow-hidden p-space-md shadow-sm space-y-space-md">
+        <div class="aspect-[4/5] rounded overflow-hidden relative bg-surface-taupe"><div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Portret van Sophie Laurens" style="background-image:url('images/team-sophie.jpg')"></div></div>
+        <div class="space-y-space-xs">
+          <span class="font-label-caps text-label-caps uppercase text-clay-terracotta">Kleur- &amp; Textielspecialist</span>
+          <h3 class="font-headline-md text-[1.4rem] text-primary">Sophie Laurens</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Specialisatie: Verfpaletten (Mia Colore kalk- &amp; krijtverf), tactiele behangselecties van Arte en stofferingen.</p>
+        </div>
+      </div>
+      <div class="bg-surface rounded overflow-hidden p-space-md shadow-sm space-y-space-md">
+        <div class="aspect-[4/5] rounded overflow-hidden relative bg-surface-taupe"><div class="absolute inset-0 bg-cover bg-center" role="img" aria-label="Portret van Lars Meijer" style="background-image:url('images/team-lars.jpg')"></div></div>
+        <div class="space-y-space-xs">
+          <span class="font-label-caps text-label-caps uppercase text-clay-terracotta">Projectbegeleiding &amp; Maatwerk</span>
+          <h3 class="font-headline-md text-[1.4rem] text-primary">Lars Meijer</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Specialisatie: Technische detaillering van maatwerkkasten, sofa constructie en turnkey montagebegeleiding ter plaatse.</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-space-lg rounded bg-surface-plaster flex flex-col sm:flex-row items-center justify-between gap-space-md" id="studio-ontmoeting">
+      <div class="flex items-center gap-space-md">
+        <div class="w-10 h-10 rounded-full bg-secondary-container text-espresso-deep flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">storefront</span></div>
+        <p class="font-serif text-[1.2rem] text-primary italic">“Loop gerust binnen — een kort advies tot 30 minuten is altijd gratis.”</p>
+      </div>
+      <a class="px-space-lg py-space-sm rounded-full bg-espresso-text text-canvas-cream font-label-md text-label-md hover:bg-clay-terracotta transition-colors shrink-0" href="#contact" data-service="tier-01">Plan Uitgebreid Advies</a>
+    </div>
+  </div>
+</section>
+
+<!-- MERKEN & FASHION -->
+<section class="w-full bg-surface py-space-2xl px-margin md:px-margin-desktop" id="merken">
+  <div class="max-w-7xl mx-auto space-y-space-xl text-center">
+    <div class="space-y-space-xs max-w-2xl mx-auto">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">In Onze Winkel</span>
+      <h2 class="font-headline-md text-headline-md text-primary">Merken, Materialen &amp; Fashion</h2>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">Een uitgebreide collectie woonaccessoires, meubels, krijt- en kalkverf, behang en raambekleding — aangevuld met kleding, tassen en sieraden. Dagelijks komen er verrassende, nieuwe items bij.</p>
+    </div>
+    <div class="space-y-space-sm">
+      <p class="flex items-center justify-center gap-space-xs font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta"><span class="material-symbols-outlined text-[16px]">chair</span>Interieur &amp; Meubels</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Eleonora</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">By Boo</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Bodilson</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Zuiver</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Dutchbone</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Bold Monkey</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Zusss</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">HKliving</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Light &amp; Living</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Riverdale</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Mondiart</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Abbey Lane Eigen Label</span></div>
+      </div>
+    </div>
+    <div class="space-y-space-sm">
+      <p class="flex items-center justify-center gap-space-xs font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta"><span class="material-symbols-outlined text-[16px]">format_paint</span>Verf, Behang &amp; Raambekleding</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-space-sm">
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Mia Colore</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Arte</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Multisol</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Kobe</span></div>
+      </div>
+    </div>
+    <div class="space-y-space-sm">
+      <p class="flex items-center justify-center gap-space-xs font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta"><span class="material-symbols-outlined text-[16px]">checkroom</span>Fashion</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-sm">
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">By Bar Amsterdam</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">POM Amsterdam</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">Grace &amp; Mila</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">FRNCH</span></div>
+        <div class="px-space-md py-space-lg rounded bg-surface-container-low flex items-center justify-center text-center hover:bg-surface-taupe transition-colors"><span class="font-serif text-[1.15rem] text-espresso-deep font-semibold tracking-tight leading-tight">La Petite Étoile</span></div>
+      </div>
+    </div>
+    <p class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Verkrijgbaar in onze winkel aan de Eindhovenseweg 16 in Valkenswaard</p>
+  </div>
+</section>
+
+<!-- CONTACT & BOEKEN -->
+<section class="w-full bg-surface-container-high py-space-2xl px-margin md:px-margin-desktop" id="contact">
+  <div class="max-w-7xl mx-auto rounded-lg overflow-hidden bg-espresso-deep text-canvas-cream shadow-2xl">
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <div class="lg:col-span-5 p-space-lg sm:p-space-xl md:p-space-2xl flex flex-col justify-between space-y-space-xl">
+        <div class="space-y-space-md">
+          <span class="font-label-caps text-label-caps uppercase tracking-widest text-clay-terracotta">Abbey Lane Valkenswaard • Contact</span>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-canvas-cream leading-tight">Klaar om uw woning te transformeren?</h2>
+          <p class="font-body-md text-body-md text-surface-container-highest/80 leading-relaxed">Kom langs in de winkel, of vraag een advies aan. Mail ons mogelijke data en tijdstippen, bel ons, of vul het formulier in.</p>
+        </div>
+        <div class="space-y-space-md pt-space-md">
+          <div class="flex items-center gap-space-md">
+            <div class="w-10 h-10 rounded-full bg-canvas-cream/10 flex items-center justify-center text-clay-terracotta shrink-0"><span class="material-symbols-outlined text-[20px]">location_on</span></div>
+            <div><p class="font-label-caps text-label-caps uppercase text-canvas-cream/60">Winkel</p><a class="font-body-md text-body-md text-canvas-cream hover:text-secondary-container transition-colors" href="https://www.google.com/maps/search/?api=1&amp;query=Abbey+Lane+Eindhovenseweg+16+5554+AC+Valkenswaard" target="_blank" rel="noopener">Eindhovenseweg 16, 5554 AC Valkenswaard</a></div>
+          </div>
+          <div class="flex items-center gap-space-md">
+            <div class="w-10 h-10 rounded-full bg-canvas-cream/10 flex items-center justify-center text-clay-terracotta shrink-0"><span class="material-symbols-outlined text-[20px]">call</span></div>
+            <div><p class="font-label-caps text-label-caps uppercase text-canvas-cream/60">Telefoon</p><a class="font-body-md text-body-md text-canvas-cream hover:text-secondary-container transition-colors" href="tel:+31408429365">040-8429365</a></div>
+          </div>
+          <div class="flex items-center gap-space-md">
+            <div class="w-10 h-10 rounded-full bg-canvas-cream/10 flex items-center justify-center text-clay-terracotta shrink-0"><span class="material-symbols-outlined text-[20px]">mail</span></div>
+            <div class="min-w-0"><p class="font-label-caps text-label-caps uppercase text-canvas-cream/60">E-mail</p><a class="block font-body-md text-body-md text-canvas-cream hover:text-secondary-container transition-colors break-all" href="mailto:interieuradvies@abbeylane.nl">interieuradvies@abbeylane.nl</a><span class="block font-body-sm text-body-sm text-canvas-cream/60">Advies &amp; afspraken</span><a class="block mt-1 font-body-md text-body-md text-canvas-cream hover:text-secondary-container transition-colors break-all" href="mailto:info@abbeylane.nl">info@abbeylane.nl</a><span class="block font-body-sm text-body-sm text-canvas-cream/60">Algemene vragen</span></div>
+          </div>
+        </div>
+        <div class="pt-space-md">
+          <p class="font-label-caps text-label-caps uppercase text-canvas-cream/60 mb-space-xs">Openingstijden</p>
+          <ul class="opening-hours font-body-sm text-body-sm text-canvas-cream/85 -mx-2">
+            <li class="flex justify-between gap-space-md py-1 px-space-sm rounded-md" data-day="1"><span class="capitalize">maandag</span><span>12:00 – 18:00</span></li>
+            <li class="flex justify-between gap-space-md py-1 px-space-sm rounded-md" data-day="2"><span class="capitalize">dinsdag</span><span>10:00 – 18:00</span></li>
+            <li class="flex justify-between gap-space-md py-1 px-space-sm rounded-md" data-day="3"><span class="capitalize">woensdag</span><span>10:00 – 18:00</span></li>
+            <li class="flex justify-between gap-space-md py-1 px-space-sm rounded-md" data-day="4"><span class="capitalize">donderdag</span><span>10:00 – 18:00</span></li>
+            <li class="flex justify-between gap-space-md py-1 px-space-sm rounded-md" data-day="5"><span class="capitalize">vrijdag</span><span>10:00 – 18:00</span></li>
+            <li class="flex justify-between gap-space-md py-1 px-space-sm rounded-md" data-day="6"><span class="capitalize">zaterdag</span><span>10:00 – 17:00</span></li>
+            <li class="flex justify-between gap-space-md py-1 px-space-sm rounded-md" data-day="0"><span class="capitalize">zondag</span><span>Gesloten</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 bg-surface-plaster text-on-surface p-space-lg sm:p-space-xl md:p-space-2xl flex flex-col justify-center">
+        <form class="space-y-space-md" id="consultation-form" novalidate>
+          <div class="space-y-space-xs">
+            <span class="font-label-caps text-label-caps uppercase tracking-wider text-clay-terracotta">Vrijblijvend Kennismaken</span>
+            <h3 class="font-headline-md text-headline-md text-primary">Vraag Uw Advies Aan</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">We nemen zo snel mogelijk contact met u op om een passend tijdstip af te stemmen.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+            <div class="space-y-space-xs">
+              <label class="block font-label-caps text-label-caps uppercase tracking-wider text-secondary" for="naam">Volledige Naam *</label>
+              <input class="w-full px-space-md py-space-sm rounded bg-surface text-on-surface border-0 focus:ring-2 focus:ring-clay-terracotta focus:outline-none placeholder:text-on-surface-variant/40 font-body-md text-body-md shadow-sm" id="naam" name="naam" autocomplete="name" placeholder="bijv. Sophie van den Berg" required type="text"/>
+            </div>
+            <div class="space-y-space-xs">
+              <label class="block font-label-caps text-label-caps uppercase tracking-wider text-secondary" for="telefoon">Telefoonnummer *</label>
+              <input class="w-full px-space-md py-space-sm rounded bg-surface text-on-surface border-0 focus:ring-2 focus:ring-clay-terracotta focus:outline-none placeholder:text-on-surface-variant/40 font-body-md text-body-md shadow-sm" id="telefoon" name="telefoon" autocomplete="tel" placeholder="+31 6 ..." required type="tel" pattern="[0-9+()\-\s]{8,}"/>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+            <div class="space-y-space-xs">
+              <label class="block font-label-caps text-label-caps uppercase tracking-wider text-secondary" for="email">E-mailadres *</label>
+              <input class="w-full px-space-md py-space-sm rounded bg-surface text-on-surface border-0 focus:ring-2 focus:ring-clay-terracotta focus:outline-none placeholder:text-on-surface-variant/40 font-body-md text-body-md shadow-sm" id="email" name="email" autocomplete="email" placeholder="uw@emailadres.nl" required type="email"/>
+            </div>
+            <div class="space-y-space-xs">
+              <label class="block font-label-caps text-label-caps uppercase tracking-wider text-secondary" for="woonplaats">Woonplaats / Regio *</label>
+              <input class="w-full px-space-md py-space-sm rounded bg-surface text-on-surface border-0 focus:ring-2 focus:ring-clay-terracotta focus:outline-none placeholder:text-on-surface-variant/40 font-body-md text-body-md shadow-sm" id="woonplaats" name="woonplaats" autocomplete="address-level2" placeholder="bijv. Valkenswaard, Waalre, Eindhoven" required type="text"/>
+            </div>
+          </div>
+          <div class="space-y-space-xs">
+            <label class="block font-label-caps text-label-caps uppercase tracking-wider text-secondary" for="dienst">Gewenste Dienst / Behoefte</label>
+            <select class="w-full px-space-md py-space-sm rounded bg-surface text-on-surface border-0 focus:ring-2 focus:ring-clay-terracotta focus:outline-none font-body-md text-body-md shadow-sm" id="dienst" name="dienst">
+              <option value="tier-01">Advies in de winkel (1 – 1,5 uur • € 79)</option>
+              <option value="tier-02" selected>Advies aan huis (1 – 1,5 uur • € 199)</option>
+              <option value="tier-03">Styling aan huis (2 – 3 uur • € 399)</option>
+              <option value="maatwerk-bank">Eigen label zitmeubelen</option>
+              <option value="kleur-stalen">Kleur- en materiaaladvies (Mia Colore / Arte)</option>
+            </select>
+          </div>
+          <div class="space-y-space-xs">
+            <label class="block font-label-caps text-label-caps uppercase tracking-wider text-secondary" for="opmerking">Vertel kort over uw woning &amp; wensen</label>
+            <textarea class="w-full px-space-md py-space-sm rounded bg-surface text-on-surface border-0 focus:ring-2 focus:ring-clay-terracotta focus:outline-none placeholder:text-on-surface-variant/40 font-body-md text-body-md shadow-sm" id="opmerking" name="opmerking" placeholder="Om welke ruimte gaat het, welke sfeer zoekt u, en welke data en tijden komen u goed uit?" rows="3"></textarea>
+          </div>
+          <!-- Honeypot tegen spam -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
+          <p id="form-error" class="hidden font-body-sm text-body-sm text-error" role="alert"></p>
+          <div class="pt-space-xs">
+            <button class="w-full py-space-md rounded-full bg-espresso-deep text-canvas-cream font-label-md text-label-md hover:bg-clay-terracotta transition-all shadow-md flex items-center justify-center gap-space-sm disabled:opacity-60" type="submit">
+              <span class="btn-label">Verstuur Aanvraag</span><span class="material-symbols-outlined text-[18px]">send</span>
+            </button>
+          </div>
+          <div class="hidden p-space-sm rounded bg-secondary-container text-espresso-deep font-body-sm text-body-sm items-center gap-space-xs" id="form-feedback" role="status">
+            <span class="material-symbols-outlined text-clay-terracotta text-[20px]">check_circle</span>
+            <span id="form-feedback-text">Hartelijk dank voor uw aanvraag. Het Abbey Lane team neemt spoedig contact met u op.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div></main>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-low text-on-surface">
+  <div class="max-w-7xl mx-auto px-margin md:px-margin-desktop pt-space-2xl pb-space-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop">
+      <div class="lg:col-span-5 space-y-space-md">
+        <div class="flex items-center gap-space-md">
+          <img src="images/dragonfly.png" alt="" class="h-16 w-auto" width="83" height="64"/>
+          <img src="images/logo-wordmark-tagline.png" alt="Abbey Lane – Interior, Styling &amp; Fashion" class="h-12 w-auto" width="203" height="48"/>
+        </div>
+        <p class="font-headline-sm text-headline-sm italic text-espresso-text leading-snug max-w-md">Curating distinctive, warm, and character-filled living spaces.</p>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Sfeervolle woonwinkel in het centrum van Valkenswaard voor interieur, styling en fashion — met persoonlijk advies in de winkel of bij u thuis.</p>
+        <div class="pt-space-sm flex items-center gap-space-md">
+          <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-secondary-container transition-colors" href="https://instagram.com/abbeylane.valkenswaard" rel="noopener" target="_blank" aria-label="Instagram"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
+          <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-secondary-container transition-colors" href="mailto:info@abbeylane.nl" aria-label="E-mail"><span class="material-symbols-outlined text-[20px]">mail</span></a>
+          <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-secondary-container transition-colors" href="tel:+31408429365" aria-label="Bellen"><span class="material-symbols-outlined text-[20px]">call</span></a>
+        </div>
+      </div>
+      <div class="lg:col-span-2 space-y-space-md">
+        <h3 class="font-label-caps text-label-caps tracking-widest uppercase text-secondary">Ontdek</h3>
+        <ul class="space-y-space-sm font-body-md text-body-md">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#over-ons">Over Ons</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#diensten-advies">Diensten &amp; Advies</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#maatwerk-banken">Eigen Label</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#portfolio">Portfolio Projecten</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#merken">Merken &amp; Fashion</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2 space-y-space-md">
+        <h3 class="font-label-caps text-label-caps tracking-widest uppercase text-secondary">Winkel</h3>
+        <div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+          <p class="text-primary font-medium">Abbey Lane</p>
+          <p>Eindhovenseweg 16</p>
+          <p>5554 AC Valkenswaard</p>
+          <p class="pt-space-xs"><a class="hover:text-primary transition-colors break-all" href="mailto:info@abbeylane.nl">info@abbeylane.nl</a></p>
+          <p><a class="hover:text-primary transition-colors break-all" href="mailto:interieuradvies@abbeylane.nl">interieuradvies@abbeylane.nl</a></p>
+          <p><a class="hover:text-primary transition-colors" href="tel:+31408429365">040-8429365</a></p>
+        </div>
+        <div class="pt-space-xs">
+          <p class="font-label-caps text-label-caps tracking-widest uppercase text-secondary">Openingstijden</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Ma 12:00 – 18:00<br/>Di t/m Vr 10:00 – 18:00<br/>Za 10:00 – 17:00 • Zo gesloten</p>
+        </div>
+      </div>
+      <div class="lg:col-span-3 space-y-space-md">
+        <h3 class="font-label-caps text-label-caps tracking-widest uppercase text-secondary">Merken</h3>
+        <div class="flex flex-wrap gap-space-xs">
+          <span class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">HKliving</span>
+          <span class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Eleonora</span>
+          <span class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Zuiver</span>
+          <span class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Mia Colore</span>
+          <span class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Arte</span>
+          <span class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">By Bar Amsterdam</span>
+          <span class="px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">POM Amsterdam</span>
+        </div>
+        <div class="p-space-md rounded bg-surface-container-high/60 space-y-space-xs">
+          <p class="font-label-caps text-label-caps uppercase text-clay-terracotta">Gratis Kort Advies</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Loop binnen voor een kort advies tot 30 minuten — altijd gratis.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-space-2xl pt-space-md border-t border-border-hairline flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+      <p>© <span id="year">2026</span> Abbey Lane – Interior, Styling &amp; Fashion. Alle rechten voorbehouden.</p>
+      <div class="flex items-center gap-space-md">
+        <a class="hover:text-on-surface transition-colors" href="#top">Terug naar boven</a>
+        <span class="text-outline-variant">•</span>
+        <a class="hover:text-on-surface transition-colors" href="#contact">Afspraak Maken</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
