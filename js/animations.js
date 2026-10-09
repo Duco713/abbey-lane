@@ -142,6 +142,15 @@
   window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(parallax); } }, { passive: true });
   parallax();
 
+  // ---- 8b. Sterren op de losse reviewkaarten vullen zich ook één voor één ---
+  document.querySelectorAll('#reviews figure [aria-label="5 sterren"]').forEach(function (box) {
+    var st = Array.prototype.slice.call(box.children);
+    st.forEach(function (s, i) { s.classList.add('star-pop'); s.style.setProperty('--d', (450 + i * 130) + 'ms'); });
+    box._onShow = function () { st.forEach(function (s) { s.classList.add('is-in'); }); };
+    io.observe(box);
+  });
+  check();
+
   // ---- 7. Libel in de footer ---------------------------------------------------
   var fly = document.querySelector('footer img[src*="dragonfly"]');
   if (fly) { fly.classList.add('dragonfly'); io.observe(fly); }
