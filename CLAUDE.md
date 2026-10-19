@@ -35,6 +35,11 @@ Statische site: `index.html` + `portfolio.html`, Tailwind via CDN, eigen JS/CSS.
 - Vast kleurthema **Roze** (`<html data-theme="roze">`) en vast **klassiek** lettertype (Newsreader + Hanken Grotesk):
   de klant koos deze. De schakelaars en de Abbey/GeosansLight-variant zijn verwijderd; het Licht-palet staat nog in de CSS.
 - Advies & Styling-kaarten: prijs staat rechts op dezelfde regel als de titel, met een lijn eronder.
+- Advies & Styling heeft drie ontwerpvarianten (`[data-variant-block="a|b|c"]`), wisselbaar met de knop linksonder
+  (`.variant-switch`, localStorage `al-variant`, standaard A). A = kaarten met rechterkaarten per groep;
+  B = keuzehulp met tabbladen (één dienst tegelijk, `[data-tabs]`); C = prijsoverzicht met 5 kolommen naast elkaar.
+  Elke variant heeft eigen teksten/prijzen: wijzigingen in ALLE varianten doorvoeren. Na de keuze van de klant de
+  andere varianten en de knop verwijderen.
 - Animaties: `css/animations.css` + `js/animations.js` (respecteert reduced motion). Hotspots: klasse `.hotspot`.
 - Menu volgt de volgorde van de pagina: Advies & Styling · Eigen Label · Portfolio · Reviews · Over Ons · Merken · Contact.
 - Afbeeldingen: `images/eigen/` (eigen foto's), `images/projecten/` (31 portfoliofoto's), `images/projecten/hd/` (homepage).

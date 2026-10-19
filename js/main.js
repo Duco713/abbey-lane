@@ -9,6 +9,44 @@
   var FORM_ENDPOINT = '';
   var STUDIO_EMAIL = 'interieuradvies@abbeylane.nl';
 
+  // ---- Ontwerpvariant Advies & Styling (A / B) ------------------------------
+  document.querySelectorAll('[data-variant-option]').forEach(function (btn) {
+    btn.setAttribute('aria-pressed', String(btn.dataset.variantOption === document.documentElement.dataset.variant));
+    btn.addEventListener('click', function () {
+      var v = btn.dataset.variantOption;
+      document.documentElement.dataset.variant = v;
+      document.querySelectorAll('[data-variant-option]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.variantOption === v)); });
+      try { localStorage.setItem('al-variant', v); } catch (e) {}
+      var sec = document.getElementById('diensten-advies');
+      if (sec && sec.getBoundingClientRect().bottom < 0) sec.scrollIntoView({ behavior: 'smooth' });
+      window.dispatchEvent(new Event('scroll')); // animaties opnieuw laten controleren
+    });
+  });
+
+  // ---- Tabbladen (variant B van Advies & Styling) --------------------------
+  document.querySelectorAll('[data-tabs]').forEach(function (wrap) {
+    var tabs = Array.prototype.slice.call(wrap.querySelectorAll('[data-tab]'));
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        var panel = wrap.querySelector('[data-panel="' + t.dataset.tab + '"]');
+        if (panel) panel.classList.toggle('hidden', !on);
+      });
+      if (focus) tab.focus();
+      window.dispatchEvent(new Event('scroll')); // animaties in het nieuwe paneel
+    }
+    tabs.forEach(function (t, i) {
+      t.tabIndex = t.getAttribute('aria-selected') === 'true' ? 0 : -1;
+      t.addEventListener('click', function () { select(t, false); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); select(tabs[(i + 1) % tabs.length], true); }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); select(tabs[(i - 1 + tabs.length) % tabs.length], true); }
+      });
+    });
+  });
+
   // ---- Mobiel menu ---------------------------------------------------------
   var menu = document.getElementById('mobile-menu');
   var openBtn = document.getElementById('menu-open');

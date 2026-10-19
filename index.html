@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl" class="scroll-smooth" data-theme="roze" data-font="klassiek">
+<html lang="nl" class="scroll-smooth" data-theme="roze" data-font="klassiek" data-variant="a">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,6 +16,11 @@
 <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png"/>
 <link rel="shortcut icon" href="favicon.ico"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+<script>
+  // Ontwerpvariant van 'Advies & Styling' direct zetten (voorkomt flitsen): 'a' of 'b'
+  (function(){var v='a';try{v=localStorage.getItem('al-variant')||v}catch(e){}
+  if(v!=='a'&&v!=='b'&&v!=='c')v='a';document.documentElement.dataset.variant=v;})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"/>
@@ -49,6 +54,14 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   }
   /* Zachte overgang tijdens wisselen van thema */
   .theme-anim *,.theme-anim *::before,.theme-anim *::after{transition:background-color .5s ease,color .5s ease,border-color .5s ease,fill .5s ease!important}
+  /* Ontwerpvarianten Advies & Styling */
+  [data-variant="a"] [data-variant-block]:not([data-variant-block="a"]),[data-variant="b"] [data-variant-block]:not([data-variant-block="b"]),[data-variant="c"] [data-variant-block]:not([data-variant-block="c"]){display:none}
+  .svc-tab[aria-selected="true"]{background:rgb(var(--c-primary-container));border-color:rgb(var(--c-primary-container))}
+  .svc-tab[aria-selected="true"] *{color:rgb(var(--c-canvas-cream))!important}
+  .variant-switch [data-variant-option]{transition:background-color .3s ease,color .3s ease}
+  [data-variant="a"] .variant-switch [data-variant-option="a"],
+  [data-variant="b"] .variant-switch [data-variant-option="b"],
+  [data-variant="c"] .variant-switch [data-variant-option="c"]{background:rgb(var(--c-primary-container));color:rgb(var(--c-canvas-cream))}
   html,body{margin:0;padding:0}
   body{overscroll-behavior:none}
   /* Ankers landen onder de vaste header */
@@ -140,6 +153,14 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       </a>
     </div>
   </div>
+</div>
+
+<!-- Wisselknop ontwerpvariant (voor de presentatie aan de klant) -->
+<div class="variant-switch fixed bottom-4 left-4 z-[45] flex items-center gap-1 p-1 pl-3 rounded-full bg-canvas-cream/95 backdrop-blur-md border border-border-hairline shadow-lg" role="group" aria-label="Ontwerpvariant Advies &amp; Styling">
+  <span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant mr-1">Variant</span>
+  <button type="button" data-variant-option="a" class="w-8 h-8 rounded-full font-label-caps text-[12px] text-on-surface-variant" title="Variant A: kaarten per groep">A</button>
+  <button type="button" data-variant-option="b" class="w-8 h-8 rounded-full font-label-caps text-[12px] text-on-surface-variant" title="Variant B: keuzehulp met tabbladen">B</button>
+  <button type="button" data-variant-option="c" class="w-8 h-8 rounded-full font-label-caps text-[12px] text-on-surface-variant" title="Variant C: prijsoverzicht naast elkaar">C</button>
 </div>
 
 <main id="main" class="w-full pt-20 bg-surface"><div id="top" class="flex flex-col w-full">
@@ -251,13 +272,13 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-space-xs">Laat ons u begeleiden in de kunst van bezield wonen.</h2>
       <p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">Voor woningen die weigeren te lijken op al het andere. Klik op de markeringen om te zien wat deze woonkamer zijn sfeer geeft.</p>
     </div>
-    <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/9] lg:aspect-[2/1] rounded shadow-lg bg-surface-dim">
+    <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/10] rounded shadow-lg bg-surface-dim">
       <div class="absolute inset-0 rounded overflow-hidden">
         <img src="images/eigen/woonkamer-hoekbank-visgraatbehang.jpg" alt="Lichte hoekbank met kussens in aardetinten voor een wand met visgraatbehang" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[50%_20%]"/>
         <div class="absolute inset-0 bg-espresso-deep/10"></div>
       </div>
 
-      <div class="hotspot absolute top-[7%] left-[7%] group z-20">
+      <div class="hotspot absolute top-[10%] left-[7%] group z-20">
         <div class="relative flex items-center justify-center">
           <span class="w-7 h-7 rounded-full bg-canvas-cream/40 animate-ping absolute"></span>
           <button type="button" aria-label="Details: Behang met visgraatmotief" class="hotspot-btn w-6 h-6 rounded-full bg-canvas-cream shadow-md flex items-center justify-center transition-transform group-hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-terracotta"><span class="w-2 h-2 rounded-full bg-primary"></span></button>
@@ -268,7 +289,7 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
           </div>
         </div>
       </div>
-      <div class="hotspot absolute top-[44%] left-[46%] group z-20">
+      <div class="hotspot absolute top-[39%] left-[46%] group z-20">
         <div class="relative flex items-center justify-center">
           <span class="w-7 h-7 rounded-full bg-canvas-cream/40 animate-ping absolute"></span>
           <button type="button" aria-label="Details: Kussens in aardetinten" class="hotspot-btn w-6 h-6 rounded-full bg-canvas-cream shadow-md flex items-center justify-center transition-transform group-hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-terracotta"><span class="w-2 h-2 rounded-full bg-clay-terracotta"></span></button>
@@ -279,7 +300,7 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
           </div>
         </div>
       </div>
-      <div class="hotspot absolute top-[62%] left-[14%] group z-20">
+      <div class="hotspot absolute top-[54%] left-[14%] group z-20">
         <div class="relative flex items-center justify-center">
           <span class="w-7 h-7 rounded-full bg-canvas-cream/40 animate-ping absolute"></span>
           <button type="button" aria-label="Details: Rond fluwelen kussen" class="hotspot-btn w-6 h-6 rounded-full bg-canvas-cream shadow-md flex items-center justify-center transition-transform group-hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-terracotta"><span class="w-2 h-2 rounded-full bg-secondary"></span></button>
@@ -290,7 +311,7 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
           </div>
         </div>
       </div>
-      <div class="hotspot absolute top-[82%] left-[68%] group z-20">
+      <div class="hotspot absolute top-[70%] left-[68%] group z-20">
         <div class="relative flex items-center justify-center">
           <span class="w-7 h-7 rounded-full bg-canvas-cream/40 animate-ping absolute"></span>
           <button type="button" aria-label="Details: Hoekbank met chaise longue" class="hotspot-btn w-6 h-6 rounded-full bg-canvas-cream shadow-md flex items-center justify-center transition-transform group-hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay-terracotta"><span class="w-2 h-2 rounded-full bg-clay-terracotta"></span></button>
@@ -321,6 +342,8 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       <p class="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed">Een goede balans tussen indeling, kleur, licht en materiaal zorgt voor een interieur waar u goed kunt wonen en werken. Met aandacht voor bestaande elementen geven we uw woning een karakter dat aansluit op uw woonwensen. Gaat u verbouwen, verhuizen of wilt u een complete make-over voor uw huis of werkplek? Van woonkamer tot woonhuis, van winkel tot hotel: onze stylisten staan voor u klaar.</p>
     </div>
 
+    <!-- ===== Variant A: kaarten rechts per groep ===== -->
+    <div class="service-variant space-y-space-2xl" data-variant-block="a">
     <!-- Rij: in de winkel -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
       <div class="lg:col-span-7 space-y-space-xl">
@@ -547,6 +570,217 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
           </div>
         </div>
       </div>
+    </div>
+    </div>
+
+    <!-- ===== Variant B: keuzehulp met tabbladen ===== -->
+    <div class="service-variant space-y-space-lg" data-variant-block="b" data-tabs>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-sm" role="tablist" aria-label="Kies een dienst">
+        <button type="button" role="tab" id="tab-personal" aria-controls="panel-personal" aria-selected="true" data-tab="personal" class="svc-tab text-left rounded p-space-md border border-border-hairline bg-canvas-cream hover:border-clay-terracotta/50 transition-colors">
+          <span class="flex items-baseline justify-between gap-space-xs"><span class="font-serif text-[1.1rem] text-clay-terracotta">01</span><span class="font-serif italic text-[1rem] text-primary whitespace-nowrap">Gratis</span></span>
+          <span class="block font-label-md text-label-md text-primary mt-1 leading-snug">Personal Shopping</span>
+        </button>
+        <button type="button" role="tab" id="tab-winkel" aria-controls="panel-winkel" aria-selected="false" data-tab="winkel" class="svc-tab text-left rounded p-space-md border border-border-hairline bg-canvas-cream hover:border-clay-terracotta/50 transition-colors">
+          <span class="flex items-baseline justify-between gap-space-xs"><span class="font-serif text-[1.1rem] text-clay-terracotta">02</span><span class="font-serif italic text-[1rem] text-primary whitespace-nowrap">€ 79</span></span>
+          <span class="block font-label-md text-label-md text-primary mt-1 leading-snug">Advies in de Winkel</span>
+        </button>
+        <button type="button" role="tab" id="tab-huis" aria-controls="panel-huis" aria-selected="false" data-tab="huis" class="svc-tab text-left rounded p-space-md border border-border-hairline bg-canvas-cream hover:border-clay-terracotta/50 transition-colors">
+          <span class="flex items-baseline justify-between gap-space-xs"><span class="font-serif text-[1.1rem] text-clay-terracotta">03</span><span class="font-serif italic text-[1rem] text-primary whitespace-nowrap">€ 199</span></span>
+          <span class="block font-label-md text-label-md text-primary mt-1 leading-snug">Advies aan Huis</span>
+        </button>
+        <button type="button" role="tab" id="tab-styling" aria-controls="panel-styling" aria-selected="false" data-tab="styling" class="svc-tab text-left rounded p-space-md border border-border-hairline bg-canvas-cream hover:border-clay-terracotta/50 transition-colors">
+          <span class="flex items-baseline justify-between gap-space-xs"><span class="font-serif text-[1.1rem] text-clay-terracotta">04</span><span class="font-serif italic text-[1rem] text-primary whitespace-nowrap">€ 399</span></span>
+          <span class="block font-label-md text-label-md text-primary mt-1 leading-snug">Styling aan Huis</span>
+        </button>
+        <button type="button" role="tab" id="tab-plan" aria-controls="panel-plan" aria-selected="false" data-tab="plan" class="svc-tab text-left rounded p-space-md border border-border-hairline bg-canvas-cream hover:border-clay-terracotta/50 transition-colors">
+          <span class="flex items-baseline justify-between gap-space-xs"><span class="font-serif text-[1.1rem] text-clay-terracotta">05</span><span class="font-serif italic text-[1rem] text-primary whitespace-nowrap">v.a. € 1.299</span></span>
+          <span class="block font-label-md text-label-md text-primary mt-1 leading-snug">Compleet Interieurplan</span>
+        </button>
+      </div>
+      <div role="tabpanel" id="panel-personal" aria-labelledby="tab-personal" data-panel="personal" class="svc-panel grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch rounded p-space-lg sm:p-space-xl bg-surface-plaster border border-border-hairline shadow-sm">
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="flex items-center gap-space-xs mb-space-sm"><span class="font-serif text-[1.4rem] text-clay-terracotta">01</span><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">In onze winkel</span></div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Personal Shopping</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0"><span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">Gratis</span><span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">Op afspraak</span></div>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Het aanbod in onze winkel is groot. Vindt u het lastig om de juiste keuzes te maken? Onze styliste helpt u met het kiezen van de juiste meubels en woonitems. Neem gerust een foto mee van uw interieur of van de betreffende ruimte.</p>
+          <ul class="font-body-sm text-body-sm text-primary space-y-space-xs mb-space-lg">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Gratis afspraak met de styliste</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Neem een foto van uw ruimte mee</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Hulp bij meubels &amp; accessoires</span></li>
+          </ul>
+          <a class="lg:mt-auto self-start inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all shadow-sm" href="#contact" data-service="personal-shopping"><span>Plan Personal Shopping</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+        <div class="lg:col-span-5"><div class="relative rounded overflow-hidden bg-surface-taupe h-full min-h-[18rem]"><img src="images/eigen/keramiek-terracotta-vazen.jpg" alt="Handbeschilderde terracotta vazen uit de collectie" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[50%_45%]"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Uit de collectie</span></div></div>
+      </div>
+      <div role="tabpanel" id="panel-winkel" aria-labelledby="tab-winkel" data-panel="winkel" class="svc-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch rounded p-space-lg sm:p-space-xl bg-surface-plaster border border-border-hairline shadow-sm">
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="flex items-center gap-space-xs mb-space-sm"><span class="font-serif text-[1.4rem] text-clay-terracotta">02</span><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">In onze winkel</span></div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Advies in de Winkel</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0"><span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">€ 79</span><span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">1 – 1,5 uur</span></div>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Een kort advies tot 30 minuten is altijd gratis — loop gerust binnen. Bij een uitgebreid advies nemen we samen uw ruimte, foto's en wensen door en leggen we kleurstalen, behang en stoffen naast elkaar.</p>
+          <ul class="font-body-sm text-body-sm text-primary space-y-space-xs mb-space-lg">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Kort advies tot 30 min gratis</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Kleurstalen, behang &amp; stoffen</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Cadeaubon € 79 op de collectie</span></li>
+          </ul>
+          <a class="lg:mt-auto self-start inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all shadow-sm" href="#contact" data-service="tier-01"><span>Plan Advies in de Winkel</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+        <div class="lg:col-span-5"><div class="relative rounded overflow-hidden bg-gradient-to-br from-primary-container to-espresso-deep text-canvas-cream p-space-lg flex flex-col justify-between h-full min-h-[18rem]"><img src="images/dragonfly.png" alt="" class="absolute -right-6 -bottom-8 w-44 opacity-25 rotate-[-12deg]"/><p class="font-label-caps text-[10px] uppercase tracking-[0.25em] text-canvas-cream/70">Cadeaubon</p><div><p class="font-serif text-[3rem] leading-none">€ 79</p><p class="text-[12px] text-canvas-cream/80 mt-space-xs max-w-[15rem]">Na het uitgebreide advies, geldig op de gehele collectie.</p></div><p class="font-label-caps text-[10px] uppercase tracking-[0.25em] text-canvas-cream/70">Abbey Lane • Valkenswaard</p></div></div>
+      </div>
+      <div role="tabpanel" id="panel-huis" aria-labelledby="tab-huis" data-panel="huis" class="svc-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch rounded p-space-lg sm:p-space-xl bg-surface-plaster border border-border-hairline shadow-sm">
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="flex items-center gap-space-xs mb-space-sm"><span class="font-serif text-[1.4rem] text-clay-terracotta">03</span><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Bij u thuis of op locatie</span><span class="px-space-sm py-space-xs rounded-full bg-clay-terracotta text-canvas-cream font-label-caps text-[10px] uppercase tracking-widest">Meest gekozen</span></div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Advies aan Huis</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0"><span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">€ 199</span><span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">1 – 1,5 uur</span></div>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">De styliste komt bij u thuis of op uw werkplek en geeft advies over inrichting, kleuren, verf, behang, verlichting en de opstelling van meubels. Ze neemt stalen mee en adviseert ook over gordijnen en jaloezieën.</p>
+          <ul class="font-body-sm text-body-sm text-primary space-y-space-xs mb-space-lg">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Stalen van verf, behang, vloerkleden &amp; meubels</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Advies over raambekleding</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Samenvatting in een moodboard</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Gratis vervolgafspraak in de winkel</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Geen reiskosten binnen 10 km</span></li>
+          </ul>
+          <a class="lg:mt-auto self-start inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all shadow-sm" href="#contact" data-service="tier-02"><span>Plan Advies aan Huis</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+        <div class="lg:col-span-5"><div class="relative rounded overflow-hidden bg-[#F7EBEF] h-full min-h-[18rem]"><img src="images/eigen/moodboard.jpg" alt="Moodboard met een schets van een maatwerkkast, groen behang en sfeerfoto's" loading="lazy" class="absolute inset-0 w-full h-full object-contain p-space-xs"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Moodboard</span></div></div>
+      </div>
+      <div role="tabpanel" id="panel-styling" aria-labelledby="tab-styling" data-panel="styling" class="svc-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch rounded p-space-lg sm:p-space-xl bg-surface-plaster border border-border-hairline shadow-sm">
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="flex items-center gap-space-xs mb-space-sm"><span class="font-serif text-[1.4rem] text-clay-terracotta">04</span><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Op locatie</span></div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Styling aan Huis</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0"><span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">€ 399</span><span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">2 – 3 uur</span></div>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Eerst inventariseren we uw wensen in de winkel. Daarna komt de styliste op locatie met meubels, accessoires, verlichting, vloerkleden en planten om de ruimte "af te stylen" tot een sfeervol geheel, binnen uw wensen en budget.</p>
+          <ul class="font-body-sm text-body-sm text-primary space-y-space-xs mb-space-lg">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Gratis inventarisatie in de winkel</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Styliste komt met de items op locatie</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>U betaalt alleen wat blijft</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Helft stylingkosten terug vanaf € 2.500</span></li>
+          </ul>
+          <a class="lg:mt-auto self-start inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all shadow-sm" href="#contact" data-service="tier-03"><span>Plan Styling aan Huis</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+        <div class="lg:col-span-5"><div class="relative rounded overflow-hidden bg-surface-taupe h-full min-h-[18rem]"><img src="images/eigen/woonkamer-hoekbank-visgraatbehang.jpg" alt="Gestylede woonkamer met lichte hoekbank en kussens in aardetinten" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[50%_35%]"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Gestyled</span></div></div>
+      </div>
+      <div role="tabpanel" id="panel-plan" aria-labelledby="tab-plan" data-panel="plan" class="svc-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-stretch rounded p-space-lg sm:p-space-xl bg-surface-plaster border border-border-hairline shadow-sm">
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="flex items-center gap-space-xs mb-space-sm"><span class="font-serif text-[1.4rem] text-clay-terracotta">05</span><span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Ontwerp &amp; visualisatie</span></div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Compleet Interieurplan</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0"><span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">v.a. € 1.299</span><span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">Offerte op maat</span></div>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Visualisatie helpt bij het maken van de keuzes. Na een gesprek over uw wensen gaan wij aan de slag, met meerdere afspraken in de winkel of op locatie. Alles wordt verwerkt in een compleet interieurplan en een offerte.</p>
+          <ul class="font-body-sm text-body-sm text-primary space-y-space-xs mb-space-lg">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Moodboard</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>2D-plan (plattegrond)</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>3D-plan (ruimtelijk)</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Los: moodboard v.a. € 39 • meubelplan v.a. € 79 • 2D v.a. € 149 • 3D v.a. € 799</span></li>
+          </ul>
+          <a class="lg:mt-auto self-start inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md hover:bg-espresso-deep transition-all shadow-sm" href="#contact" data-service="interieurplan"><span>Vraag een Interieurplan Aan</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+        <div class="lg:col-span-5"><div class="relative rounded overflow-hidden bg-surface-taupe h-full min-h-[18rem]"><img src="images/eigen/3d-interieurplan-woonkamer.jpg" alt="3D-ontwerp van een warme woonkamer met een bouclé hoekbank" loading="lazy" class="absolute inset-0 w-full h-full object-cover"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">3D visual</span></div></div>
+      </div>
+      <!-- Goed om te weten -->
+        <div class="rounded p-space-lg bg-canvas-cream border border-border-hairline space-y-space-sm">
+          <div class="flex items-center gap-space-xs text-clay-terracotta"><span class="material-symbols-outlined text-[18px]">info</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Goed om te weten</span></div>
+          <ul class="font-body-sm text-body-sm text-on-surface-variant list-disc pl-5 grid sm:grid-cols-2 gap-x-space-xl gap-y-1">
+            <li>Wenst u een uitgebreider gesprek of styling? Dat kan natuurlijk; extra tijd rekenen we af à € 19 per 15 minuten.</li>
+            <li>De uren die wij berekenen zijn inclusief voorbereiding en afronding.</li>
+            <li>Een advies of styling wordt bij voorkeur op maandag tot en met vrijdag ingepland, in overleg.</li>
+            <li>Advies of styling aan huis buiten een straal van 10 km: reiskosten op aanvraag.</li>
+            <li>De stempelkaart is niet geldig op meubelen, verf, behang en advieskosten.</li>
+          </ul>
+        </div>
+    </div>
+
+    <!-- ===== Variant C: prijsoverzicht naast elkaar ===== -->
+    <div class="service-variant space-y-space-lg" data-variant-block="c">
+      <div class="flex lg:grid lg:grid-cols-5 gap-space-md overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-space-sm -mx-1 px-1">
+      <article class="relative flex flex-col rounded bg-canvas-cream border border-border-hairline shadow-sm overflow-hidden snap-start shrink-0 w-[80%] sm:w-[46%] lg:w-auto">
+        
+        <div class="relative overflow-hidden bg-surface-taupe h-40"><img src="images/eigen/keramiek-terracotta-vazen.jpg" alt="Handbeschilderde terracotta vazen uit de collectie" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[50%_15%]"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Uit de collectie</span></div>
+        <div class="flex flex-col flex-1 p-space-md">
+          <div class="flex items-center gap-space-xs"><span class="font-serif text-[1.2rem] text-clay-terracotta">01</span><span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary">In onze winkel</span></div>
+          <h3 class="font-serif text-[1.35rem] leading-tight text-primary mt-space-xs min-h-[3.4rem]">Personal Shopping</h3>
+          <div class="py-space-sm my-space-sm border-y border-border-hairline">
+            <p class="font-serif text-[1.9rem] leading-none text-clay-terracotta">Gratis</p>
+            <p class="font-label-caps text-[10px] uppercase tracking-wider text-secondary mt-1">Op afspraak</p>
+          </div>
+          <ul class="font-body-sm text-[13px] text-on-surface-variant space-y-space-xs mb-space-md">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Gratis afspraak met de styliste</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Neem een foto van uw ruimte mee</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Hulp bij meubels &amp; accessoires</span></li>
+          </ul>
+          <a class="mt-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-plaster text-primary hover:bg-surface-taupe font-label-md text-[13px] transition-all" href="#contact" data-service="personal-shopping"><span>Plan afspraak</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+      </article>
+      <article class="relative flex flex-col rounded bg-canvas-cream border border-border-hairline shadow-sm overflow-hidden snap-start shrink-0 w-[80%] sm:w-[46%] lg:w-auto">
+        
+        <div class="relative overflow-hidden bg-gradient-to-br from-primary-container to-espresso-deep text-canvas-cream p-space-lg flex flex-col justify-between h-40"><img src="images/dragonfly.png" alt="" class="absolute -right-4 -bottom-6 w-32 opacity-25 rotate-[-12deg]"/><p class="font-label-caps text-[10px] uppercase tracking-[0.25em] text-canvas-cream/70">Cadeaubon</p><p class="font-serif text-[2.6rem] leading-none">€ 79</p><p class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-canvas-cream/70">Bij uitgebreid advies</p></div>
+        <div class="flex flex-col flex-1 p-space-md">
+          <div class="flex items-center gap-space-xs"><span class="font-serif text-[1.2rem] text-clay-terracotta">02</span><span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary">In onze winkel</span></div>
+          <h3 class="font-serif text-[1.35rem] leading-tight text-primary mt-space-xs min-h-[3.4rem]">Advies in de Winkel</h3>
+          <div class="py-space-sm my-space-sm border-y border-border-hairline">
+            <p class="font-serif text-[1.9rem] leading-none text-clay-terracotta">€ 79</p>
+            <p class="font-label-caps text-[10px] uppercase tracking-wider text-secondary mt-1">1 – 1,5 uur</p>
+          </div>
+          <ul class="font-body-sm text-[13px] text-on-surface-variant space-y-space-xs mb-space-md">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Kort advies tot 30 min gratis</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Kleurstalen, behang &amp; stoffen</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Cadeaubon € 79 op de collectie</span></li>
+          </ul>
+          <a class="mt-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-plaster text-primary hover:bg-surface-taupe font-label-md text-[13px] transition-all" href="#contact" data-service="tier-01"><span>Plan afspraak</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+      </article>
+      <article class="relative flex flex-col rounded bg-canvas-cream border border-2 border-clay-terracotta/50 shadow-lg overflow-hidden snap-start shrink-0 w-[80%] sm:w-[46%] lg:w-auto">
+        <span class="absolute top-3 right-3 z-10 px-space-sm py-space-xs rounded-full bg-clay-terracotta text-canvas-cream font-label-caps text-[10px] uppercase tracking-widest">Meest gekozen</span>
+        <div class="relative overflow-hidden bg-[#F7EBEF] h-40"><img src="images/eigen/moodboard.jpg" alt="Moodboard met een schets van een maatwerkkast, groen behang en sfeerfoto's" loading="lazy" class="absolute inset-0 w-full h-full object-contain p-space-xs"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Moodboard</span></div>
+        <div class="flex flex-col flex-1 p-space-md">
+          <div class="flex items-center gap-space-xs"><span class="font-serif text-[1.2rem] text-clay-terracotta">03</span><span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary">Bij u thuis of op locatie</span></div>
+          <h3 class="font-serif text-[1.35rem] leading-tight text-primary mt-space-xs min-h-[3.4rem]">Advies aan Huis</h3>
+          <div class="py-space-sm my-space-sm border-y border-border-hairline">
+            <p class="font-serif text-[1.9rem] leading-none text-clay-terracotta">€ 199</p>
+            <p class="font-label-caps text-[10px] uppercase tracking-wider text-secondary mt-1">1 – 1,5 uur</p>
+          </div>
+          <ul class="font-body-sm text-[13px] text-on-surface-variant space-y-space-xs mb-space-md">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Stalen van verf, behang, vloerkleden &amp; meubels</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Advies over raambekleding</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Samenvatting in een moodboard</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Gratis vervolgafspraak in de winkel</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Geen reiskosten binnen 10 km</span></li>
+          </ul>
+          <a class="mt-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full bg-primary-container text-canvas-cream hover:bg-espresso-deep font-label-md text-[13px] transition-all" href="#contact" data-service="tier-02"><span>Plan afspraak</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+      </article>
+      <article class="relative flex flex-col rounded bg-canvas-cream border border-border-hairline shadow-sm overflow-hidden snap-start shrink-0 w-[80%] sm:w-[46%] lg:w-auto">
+        
+        <div class="relative overflow-hidden bg-surface-taupe h-40"><img src="images/eigen/woonkamer-hoekbank-visgraatbehang.jpg" alt="Gestylede woonkamer met lichte hoekbank en kussens in aardetinten" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[50%_35%]"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Gestyled</span></div>
+        <div class="flex flex-col flex-1 p-space-md">
+          <div class="flex items-center gap-space-xs"><span class="font-serif text-[1.2rem] text-clay-terracotta">04</span><span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary">Op locatie</span></div>
+          <h3 class="font-serif text-[1.35rem] leading-tight text-primary mt-space-xs min-h-[3.4rem]">Styling aan Huis</h3>
+          <div class="py-space-sm my-space-sm border-y border-border-hairline">
+            <p class="font-serif text-[1.9rem] leading-none text-clay-terracotta">€ 399</p>
+            <p class="font-label-caps text-[10px] uppercase tracking-wider text-secondary mt-1">2 – 3 uur</p>
+          </div>
+          <ul class="font-body-sm text-[13px] text-on-surface-variant space-y-space-xs mb-space-md">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Gratis inventarisatie in de winkel</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Styliste komt met de items op locatie</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>U betaalt alleen wat blijft</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Helft stylingkosten terug vanaf € 2.500</span></li>
+          </ul>
+          <a class="mt-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-plaster text-primary hover:bg-surface-taupe font-label-md text-[13px] transition-all" href="#contact" data-service="tier-03"><span>Plan afspraak</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+      </article>
+      <article class="relative flex flex-col rounded bg-canvas-cream border border-border-hairline shadow-sm overflow-hidden snap-start shrink-0 w-[80%] sm:w-[46%] lg:w-auto">
+        
+        <div class="relative overflow-hidden bg-surface-taupe h-40"><img src="images/eigen/3d-interieurplan-woonkamer.jpg" alt="3D-ontwerp van een warme woonkamer met een bouclé hoekbank" loading="lazy" class="absolute inset-0 w-full h-full object-cover"/><span class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">3D visual</span></div>
+        <div class="flex flex-col flex-1 p-space-md">
+          <div class="flex items-center gap-space-xs"><span class="font-serif text-[1.2rem] text-clay-terracotta">05</span><span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary">Ontwerp &amp; visualisatie</span></div>
+          <h3 class="font-serif text-[1.35rem] leading-tight text-primary mt-space-xs min-h-[3.4rem]">Compleet Interieurplan</h3>
+          <div class="py-space-sm my-space-sm border-y border-border-hairline">
+            <p class="font-serif text-[1.9rem] leading-none text-clay-terracotta">v.a. € 1.299</p>
+            <p class="font-label-caps text-[10px] uppercase tracking-wider text-secondary mt-1">Offerte op maat</p>
+          </div>
+          <ul class="font-body-sm text-[13px] text-on-surface-variant space-y-space-xs mb-space-md">
+            <li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Moodboard</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>2D-plan (plattegrond)</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>3D-plan (ruimtelijk)</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta mt-0.5">check</span><span>Los: moodboard v.a. € 39 • meubelplan v.a. € 79 • 2D v.a. € 149 • 3D v.a. € 799</span></li>
+          </ul>
+          <a class="mt-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-plaster text-primary hover:bg-surface-taupe font-label-md text-[13px] transition-all" href="#contact" data-service="interieurplan"><span>Plan afspraak</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+        </div>
+      </article>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant text-center lg:hidden">Swipe voor alle diensten →</p>
+      <!-- Goed om te weten -->
+        <div class="rounded p-space-lg bg-canvas-cream border border-border-hairline space-y-space-sm">
+          <div class="flex items-center gap-space-xs text-clay-terracotta"><span class="material-symbols-outlined text-[18px]">info</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Goed om te weten</span></div>
+          <ul class="font-body-sm text-body-sm text-on-surface-variant list-disc pl-5 grid sm:grid-cols-2 gap-x-space-xl gap-y-1">
+            <li>Wenst u een uitgebreider gesprek of styling? Dat kan natuurlijk; extra tijd rekenen we af à € 19 per 15 minuten.</li>
+            <li>De uren die wij berekenen zijn inclusief voorbereiding en afronding.</li>
+            <li>Een advies of styling wordt bij voorkeur op maandag tot en met vrijdag ingepland, in overleg.</li>
+            <li>Advies of styling aan huis buiten een straal van 10 km: reiskosten op aanvraag.</li>
+            <li>De stempelkaart is niet geldig op meubelen, verf, behang en advieskosten.</li>
+          </ul>
+        </div>
     </div>
 
     <!-- Werkwijze -->
@@ -1070,7 +1304,7 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   </div>
 </footer>
 
-<script src="js/main.js?v=7"></script>
+<script src="js/main.js?v=9"></script>
 <script src="js/animations.js?v=6"></script>
 </body>
 </html>
