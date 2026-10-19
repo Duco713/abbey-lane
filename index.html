@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl" class="scroll-smooth">
+<html lang="nl" class="scroll-smooth" data-theme="roze" data-font="klassiek">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,21 +11,14 @@
 <meta property="og:description" content="Woonwinkel, interieuradvies, styling en fashion in Valkenswaard."/>
 <meta property="og:image" content="images/eigen/winkel-voorkant-eindhovenseweg.jpg"/>
 <meta property="og:type" content="website"/>
-<meta name="theme-color" content="#FDFBF8"/>
+<meta name="theme-color" content="#F8ECE7"/>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png"/>
 <link rel="shortcut icon" href="favicon.ico"/>
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-<script>
-  // Kleurthema direct zetten (voorkomt flitsen): 'licht' of 'roze'
-  (function(){var t='licht';try{t=localStorage.getItem('al-theme')||t}catch(e){}
-  if(t!=='licht'&&t!=='roze')t='licht';document.documentElement.dataset.theme=t;
-  var f='klassiek';try{f=localStorage.getItem('al-font')||f}catch(e){}
-  if(f!=='klassiek'&&f!=='abbey')f='klassiek';document.documentElement.dataset.font=f;})();
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Jost:wght@300;400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha-value>)","surface-container-lowest":"rgb(var(--c-surface-container-lowest) / <alpha-value>)","surface-container-low":"rgb(var(--c-surface-container-low) / <alpha-value>)","surface-container":"rgb(var(--c-surface-container) / <alpha-value>)","surface-container-high":"rgb(var(--c-surface-container-high) / <alpha-value>)","surface-container-highest":"rgb(var(--c-surface-container-highest) / <alpha-value>)","surface-plaster":"rgb(var(--c-surface-plaster) / <alpha-value>)","surface-taupe":"rgb(var(--c-surface-taupe) / <alpha-value>)","surface-dim":"rgb(var(--c-surface-dim) / <alpha-value>)","primary":"rgb(var(--c-primary) / <alpha-value>)","primary-container":"rgb(var(--c-primary-container) / <alpha-value>)","on-primary":"rgb(var(--c-on-primary) / <alpha-value>)","secondary":"rgb(var(--c-secondary) / <alpha-value>)","secondary-container":"rgb(var(--c-secondary-container) / <alpha-value>)","on-surface":"rgb(var(--c-on-surface) / <alpha-value>)","on-surface-variant":"rgb(var(--c-on-surface-variant) / <alpha-value>)","clay-terracotta":"rgb(var(--c-clay-terracotta) / <alpha-value>)","canvas-cream":"rgb(var(--c-canvas-cream) / <alpha-value>)","espresso-deep":"rgb(var(--c-espresso-deep) / <alpha-value>)","espresso-text":"rgb(var(--c-espresso-text) / <alpha-value>)","border-hairline":"rgb(var(--c-border-hairline) / <alpha-value>)","olive-khaki":"rgb(var(--c-olive-khaki) / <alpha-value>)","outline-variant":"rgb(var(--c-outline-variant) / <alpha-value>)","error":"rgb(var(--c-error) / <alpha-value>)","gold":"rgb(var(--c-gold) / <alpha-value>)"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"gutter-desktop":"2.5rem","margin-desktop":"4rem","space-2xl":"5rem","space-md":"1rem",gutter:"1.5rem","space-xs":"0.25rem","space-lg":"1.75rem",margin:"1.25rem","margin-tablet":"2.5rem","space-xl":"3rem","space-sm":"0.5rem"},fontFamily:{sans:["Hanken Grotesk","system-ui","sans-serif"],serif:["Newsreader","Georgia","serif"],"headline-lg":["Newsreader"],"label-md":["Hanken Grotesk"],"display-hero-mobile":["Newsreader"],"body-lg":["Hanken Grotesk"],"headline-sm":["Newsreader"],"headline-md":["Newsreader"],"label-caps":["Hanken Grotesk"],"headline-lg-mobile":["Newsreader"],"body-sm":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"display-hero":["Newsreader"]},fontSize:{"headline-lg":["3rem",{lineHeight:"1.15",letterSpacing:"-0.02em",fontWeight:"400"}],"label-md":["0.875rem",{lineHeight:"1.4",letterSpacing:"0.01em",fontWeight:"500"}],"display-hero-mobile":["2.75rem",{lineHeight:"1.15",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["1.125rem",{lineHeight:"1.65",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["1.5rem",{lineHeight:"1.35",letterSpacing:"0",fontWeight:"400"}],"headline-md":["2rem",{lineHeight:"1.25",letterSpacing:"-0.01em",fontWeight:"400"}],"label-caps":["0.6875rem",{lineHeight:"1.3",letterSpacing:"0.12em",fontWeight:"600"}],"headline-lg-mobile":["2rem",{lineHeight:"1.25",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["0.8125rem",{lineHeight:"1.5",letterSpacing:"0.01em",fontWeight:"400"}],"body-md":["0.9375rem",{lineHeight:"1.6",letterSpacing:"0",fontWeight:"400"}],"display-hero":["4.5rem",{lineHeight:"1.08",letterSpacing:"-0.025em",fontWeight:"400"}]}}}};
@@ -56,10 +49,6 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   }
   /* Zachte overgang tijdens wisselen van thema */
   .theme-anim *,.theme-anim *::before,.theme-anim *::after{transition:background-color .5s ease,color .5s ease,border-color .5s ease,fill .5s ease!important}
-  /* Thema-schakelaar */
-  .theme-switch [data-theme-option]{transition:background-color .3s ease,color .3s ease}
-  [data-theme="licht"] .theme-switch [data-theme-option="licht"],
-  [data-theme="roze"] .theme-switch [data-theme-option="roze"]{background:rgb(var(--c-primary-container));color:rgb(var(--c-canvas-cream))}
   html,body{margin:0;padding:0}
   body{overscroll-behavior:none}
   /* Ankers landen onder de vaste header */
@@ -81,7 +70,6 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   a[href^="tel"]{color:inherit;text-decoration:none}
 </style>
 <link rel="stylesheet" href="css/animations.css?v=2"/>
-<link rel="stylesheet" href="css/fonts.css?v=4"/>
 </head>
 <body class="bg-surface text-on-surface font-sans antialiased selection:bg-secondary-container selection:text-primary">
 
@@ -111,27 +99,6 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       <a class="nav-link whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200 underline-offset-8 decoration-clay-terracotta" href="#contact">Contact</a>
     </nav>
     <div class="xl:flex-1 flex items-center justify-end gap-space-md shrink-0">
-      <div class="relative hidden md:block" id="display-settings">
-        <button type="button" id="settings-toggle" class="w-10 h-10 rounded-full bg-surface-container border border-border-hairline text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors" aria-label="Weergave: kleur en lettertype" aria-expanded="false" aria-controls="settings-panel" title="Kleur &amp; lettertype">
-          <span class="material-symbols-outlined text-[20px]">tune</span>
-        </button>
-        <div id="settings-panel" class="hidden absolute right-0 top-12 w-60 p-space-md rounded bg-canvas-cream border border-border-hairline shadow-xl space-y-space-sm z-50">
-          <div class="flex items-center justify-between gap-space-sm">
-            <span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Kleur</span>
-      <div class="theme-switch flex items-center gap-0.5 p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Kleurthema">
-        <button type="button" data-theme-option="licht" class="w-7 h-7 rounded-full flex items-center justify-center" aria-label="Licht thema" title="Licht"><span class="w-3 h-3 rounded-full bg-white ring-1 ring-gold/60"></span></button>
-        <button type="button" data-theme-option="roze" class="w-7 h-7 rounded-full flex items-center justify-center" aria-label="Roze thema" title="Roze"><span class="w-3 h-3 rounded-full bg-[#F2DFD8] ring-1 ring-gold/60"></span></button>
-      </div>
-          </div>
-          <div class="flex items-center justify-between gap-space-sm">
-            <span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Letter</span>
-            <div class="font-switch flex items-center gap-0.5 p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Lettertype">
-        <button type="button" data-font-option="klassiek" class="h-7 px-2.5 rounded-full text-[15px] leading-none text-on-surface-variant" aria-label="Klassiek lettertype" title="Klassiek">Aa</button>
-        <button type="button" data-font-option="abbey" class="h-7 px-2.5 rounded-full text-[13px] leading-none text-on-surface-variant" aria-label="Abbey Lane lettertype" title="Abbey Lane">AA</button>
-      </div>
-          </div>
-        </div>
-      </div>
       <a class="hidden lg:flex xl:hidden 2xl:flex items-center gap-space-xs whitespace-nowrap font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="tel:+31408429365">
         <span class="material-symbols-outlined text-[18px] text-secondary">call</span><span>040-8429365</span>
       </a>
@@ -165,14 +132,6 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       <a class="py-space-sm font-headline-sm text-headline-sm text-primary hover:text-clay-terracotta" href="#contact" data-menu-close>Contact</a>
     </nav>
     <div class="mt-auto space-y-space-sm">
-      <div class="font-switch flex items-center p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Lettertype">
-        <button type="button" data-font-option="klassiek" class="flex-1 py-2 rounded-full text-[16px] text-on-surface-variant">Aa Klassiek</button>
-        <button type="button" data-font-option="abbey" class="flex-1 py-2 rounded-full text-[13px] text-on-surface-variant">ABBEY LANE</button>
-      </div>
-      <div class="theme-switch flex items-center p-1 rounded-full bg-surface-container border border-border-hairline" role="group" aria-label="Kleurthema">
-        <button type="button" data-theme-option="licht" class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-white ring-1 ring-gold/60"></span>Licht</button>
-        <button type="button" data-theme-option="roze" class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-[#F2DFD8] ring-1 ring-gold/60"></span>Roze</button>
-      </div>
       <a class="flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-full bg-primary-container text-canvas-cream font-label-md text-label-md" href="#contact" data-menu-close>
         <span>Boek Interieuradvies</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
       </a>
@@ -362,21 +321,22 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
       <p class="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed">Een goede balans tussen indeling, kleur, licht en materiaal zorgt voor een interieur waar u goed kunt wonen en werken. Met aandacht voor bestaande elementen geven we uw woning een karakter dat aansluit op uw woonwensen. Gaat u verbouwen, verhuizen of wilt u een complete make-over voor uw huis of werkplek? Van woonkamer tot woonhuis, van winkel tot hotel: onze stylisten staan voor u klaar.</p>
     </div>
 
+    <!-- Rij: in de winkel -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
       <div class="lg:col-span-7 space-y-space-xl">
         <!-- 01 -->
         <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-container-low hover:bg-surface-plaster transition-all duration-300 border border-border-hairline/60 shadow-sm">
-          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
-            <div class="flex items-center gap-space-xs">
-              <span class="font-serif text-[1.4rem] text-clay-terracotta">01</span>
-              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">In Onze Winkel</span>
-            </div>
-            <div class="sm:text-right">
-              <span class="font-serif text-[1.2rem] text-primary italic">Gratis</span>
-              <span class="block font-label-caps text-[9px] text-secondary uppercase">Op afspraak</span>
+          <div class="flex items-center gap-space-xs mb-space-sm">
+            <span class="font-serif text-[1.4rem] text-clay-terracotta">01</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">In Onze Winkel</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Personal Shopping</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0">
+              <span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">Gratis</span>
+              <span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">Op afspraak</span>
             </div>
           </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Personal Shopping</h3>
           <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Het aanbod in onze winkel is groot aan meubels en accessoires. Vindt u het lastig om de juiste keuzes te maken? Maak dan een afspraak met onze styliste: zij helpt u graag met het kiezen van de juiste woonitems. Neem gerust een foto mee van uw interieur of van de betreffende ruimte. De afspraak in onze winkel is gratis.</p>
           <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
             <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">redeem</span>Gratis afspraak</span>
@@ -387,17 +347,17 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
         </div>
         <!-- 02 -->
         <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-container-low hover:bg-surface-plaster transition-all duration-300 border border-border-hairline/60 shadow-sm">
-          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
-            <div class="flex items-center gap-space-xs">
-              <span class="font-serif text-[1.4rem] text-clay-terracotta">02</span>
-              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">In Onze Winkel</span>
-            </div>
-            <div class="sm:text-right">
-              <span class="font-serif text-[1.2rem] text-primary italic">€ 79,-</span>
-              <span class="block font-label-caps text-[9px] text-secondary uppercase">Incl. cadeaubon t.w.v. € 79</span>
+          <div class="flex items-center gap-space-xs mb-space-sm">
+            <span class="font-serif text-[1.4rem] text-clay-terracotta">02</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">In Onze Winkel</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Advies in de Winkel</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0">
+              <span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">€ 79,-</span>
+              <span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">Incl. cadeaubon t.w.v. € 79</span>
             </div>
           </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Advies in de Winkel</h3>
           <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Een kort advies tot 30 minuten is altijd gratis — loop gerust binnen. Voor een uitgebreid advies van 1 tot 1,5 uur nemen we samen uw ruimte, foto's en wensen door en leggen we kleurstalen, behang en stoffen naast elkaar. Na afloop ontvangt u een cadeaubon van € 79, geldig op de gehele collectie.</p>
           <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
             <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">check</span>Kort advies gratis</span>
@@ -406,20 +366,52 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
           </div>
           <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary font-semibold hover:text-clay-terracotta transition-colors group-hover:translate-x-1 duration-200" href="#contact" data-service="tier-01"><span>Plan Advies in de Winkel</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
         </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="bg-canvas-cream p-space-lg rounded border border-border-hairline shadow-lg space-y-space-md">
+          <div class="flex items-center justify-between gap-space-sm border-b border-border-hairline pb-space-sm">
+            <div class="flex items-center gap-space-xs text-clay-terracotta">
+              <span class="material-symbols-outlined text-[20px]">storefront</span>
+              <span class="font-label-caps text-label-caps uppercase tracking-wider">In de Winkel</span>
+            </div>
+            <span class="font-label-caps text-[10px] text-secondary uppercase text-right">Eindhovenseweg 16</span>
+          </div>
+          <div class="relative rounded overflow-hidden shadow-inner bg-surface-taupe">
+            <img src="images/eigen/keramiek-terracotta-vazen.jpg" alt="Handbeschilderde terracotta vazen met zwart-witte grepen uit de collectie van Abbey Lane" loading="lazy" width="1695" height="1800" class="block w-full h-auto"/>
+            <div class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 backdrop-blur-sm rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Uit de Collectie</div>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Loop binnen in onze winkel in Valkenswaard. Samen met onze styliste kiest u de juiste meubels en accessoires, en leggen we kleurstalen, behang en stoffen naast elkaar.</p>
+          <ul class="grid grid-cols-2 gap-space-xs">
+              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">redeem</span><span class="text-[11px] font-medium text-primary leading-tight">Personal shopping gratis</span></li>
+              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">schedule</span><span class="text-[11px] font-medium text-primary leading-tight">Kort advies tot 30 min gratis</span></li>
+              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">palette</span><span class="text-[11px] font-medium text-primary leading-tight">Verf-, behang- &amp; stofstalen</span></li>
+              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">card_giftcard</span><span class="text-[11px] font-medium text-primary leading-tight">Cadeaubon bij uitgebreid advies</span></li>
+          </ul>
+          <div class="p-space-sm rounded bg-secondary-container/40 border border-secondary-container flex items-center justify-between gap-space-xs">
+            <div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px] text-clay-terracotta">schedule</span><span class="font-label-caps text-[11px] uppercase tracking-wider">Maandag t/m zaterdag open</span></div>
+            <a href="#contact" class="text-body-sm text-secondary font-serif italic hover:text-primary transition-colors">Openingstijden</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rij: aan huis / moodboard -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+      <div class="lg:col-span-7 space-y-space-xl">
         <!-- 03 -->
         <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-plaster hover:bg-surface-container transition-all duration-300 border-2 border-clay-terracotta/30 shadow-md">
           <div class="absolute -top-3 right-space-lg px-space-md py-space-xs rounded-full bg-clay-terracotta text-canvas-cream font-label-caps text-[10px] uppercase tracking-widest">Meest Gekozen</div>
-          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
-            <div class="flex items-center gap-space-xs">
-              <span class="font-serif text-[1.4rem] text-clay-terracotta">03</span>
-              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Bij U Thuis of op Locatie</span>
-            </div>
-            <div class="sm:text-right">
-              <span class="font-serif text-[1.2rem] text-primary italic">€ 199,-</span>
-              <span class="block font-label-caps text-[9px] text-secondary uppercase">1 – 1,5 uur</span>
+          <div class="flex items-center gap-space-xs mb-space-sm">
+            <span class="font-serif text-[1.4rem] text-clay-terracotta">03</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Bij U Thuis of op Locatie</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Advies aan Huis</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0">
+              <span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">€ 199,-</span>
+              <span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">1 – 1,5 uur</span>
             </div>
           </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Advies aan Huis</h3>
           <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Tijdens een advies op locatie worden uw vragen en wensen over de inrichting van uw interieur beantwoord. De styliste komt bij u thuis of op uw werkplek en geeft advies over inrichting, kleuren, verf, behang, verlichting, de opstelling van bestaande en eventuele nieuwe meubels en accessoires. Ze neemt stalen mee van verfkleuren, behang, vloerkleden en meubelen. Ook raambekleding hoort tot de opties, zoals gordijnen en jaloezieën. U ontvangt een korte samenvatting in de vorm van een moodboard.</p>
           <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
             <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">dashboard</span>Moodboard</span>
@@ -430,17 +422,17 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
         </div>
         <!-- 04 -->
         <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-container-low hover:bg-surface-plaster transition-all duration-300 border border-border-hairline/60 shadow-sm">
-          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
-            <div class="flex items-center gap-space-xs">
-              <span class="font-serif text-[1.4rem] text-clay-terracotta">04</span>
-              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Bij U Thuis of op Locatie</span>
-            </div>
-            <div class="sm:text-right">
-              <span class="font-serif text-[1.2rem] text-primary italic">€ 399,-</span>
-              <span class="block font-label-caps text-[9px] text-secondary uppercase">2 – 3 uur, op locatie</span>
+          <div class="flex items-center gap-space-xs mb-space-sm">
+            <span class="font-serif text-[1.4rem] text-clay-terracotta">04</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Bij U Thuis of op Locatie</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Styling aan Huis</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0">
+              <span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">€ 399,-</span>
+              <span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">2 – 3 uur, op locatie</span>
             </div>
           </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Styling aan Huis</h3>
           <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Eerst inventariseren we uw wensen in een gratis afspraak in de winkel, met behulp van foto's van de huidige inrichting en/of een plattegrond. Daarna komt de styliste op locatie met meubels, accessoires, verlichting, vloerkleden, wanddecoratie en bloemen of planten om de ruimte "af te stylen" tot een sfeervol geheel, uiteraard binnen uw wensen en budget. Na de styling worden de afgenomen items gefactureerd. Bij aanschaf van meubels en accessoires vanaf € 2.500 brengen we de helft van de stylingkosten in mindering.</p>
           <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
             <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">storefront</span>Gratis inventarisatie in de winkel</span>
@@ -449,19 +441,53 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
           </div>
           <a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary font-semibold hover:text-clay-terracotta transition-colors group-hover:translate-x-1 duration-200" href="#contact" data-service="tier-03"><span>Plan Styling aan Huis</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
         </div>
-        <!-- 05 Interieurplan -->
-        <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-container-low hover:bg-surface-plaster transition-all duration-300 border border-border-hairline/60 shadow-sm" id="interieurplan">
-          <div class="flex flex-wrap items-start justify-between gap-space-sm mb-space-sm">
-            <div class="flex items-center gap-space-xs">
-              <span class="font-serif text-[1.4rem] text-clay-terracotta">05</span>
-              <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Ontwerp &amp; Visualisatie</span>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="bg-canvas-cream p-space-lg rounded border border-border-hairline shadow-lg space-y-space-md">
+          <div class="flex items-center justify-between gap-space-sm border-b border-border-hairline pb-space-sm">
+            <div class="flex items-center gap-space-xs text-clay-terracotta">
+              <span class="material-symbols-outlined text-[20px]">dashboard</span>
+              <span class="font-label-caps text-label-caps uppercase tracking-wider">Atelier Moodboard No. 04</span>
             </div>
-            <div class="sm:text-right">
-              <span class="font-serif text-[1.2rem] text-primary italic">Vanaf € 1.299,-</span>
-              <span class="block font-label-caps text-[9px] text-secondary uppercase">Offerte op maat</span>
+            <span class="font-label-caps text-[10px] text-secondary uppercase text-right">Uit de Winkel</span>
+          </div>
+          <div class="relative rounded overflow-hidden shadow-inner bg-surface-taupe">
+            <img src="images/eigen/moodboard.jpg" alt="Moodboard met een schets van een maatwerkkast, groen behang met bladmotief, een bouclé fauteuil en sfeerfoto's van het interieur" loading="lazy" width="1131" height="1600" class="block w-full h-auto"/>
+            <div class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 backdrop-blur-sm rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Moodboard</div>
+          </div>
+          <div>
+            <p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary mb-space-xs">Tactiele Curatie:</p>
+            <div class="grid grid-cols-2 gap-space-xs">
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-clay-terracotta shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Terracotta Krijt</span><span class="text-[9px] text-on-surface-variant">Mia Colore Calda</span></div></div>
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-surface-taupe border border-border-hairline shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Linnen Weefsel</span><span class="text-[9px] text-on-surface-variant">Meubelstoffering</span></div></div>
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-olive-khaki shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Salie &amp; Olive</span><span class="text-[9px] text-on-surface-variant">Velours Touch</span></div></div>
+              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-espresso-deep shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Gerookt Eiken</span><span class="text-[9px] text-on-surface-variant">Mat Gelakt Bespoke</span></div></div>
             </div>
           </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Compleet Interieurplan</h3>
+          <div class="p-space-sm rounded bg-secondary-container/40 border border-secondary-container flex items-center justify-between gap-space-xs">
+            <div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px] text-clay-terracotta">verified</span><span class="font-label-caps text-[11px] uppercase tracking-wider">Kleurstalen in de Winkel</span></div>
+            <span class="text-body-sm text-secondary font-serif italic">Valkenswaard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rij: interieurplan / 3D -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+      <div class="lg:col-span-7 space-y-space-xl">
+        <!-- 05 Interieurplan -->
+        <div class="group relative rounded p-space-lg sm:p-space-xl bg-surface-container-low hover:bg-surface-plaster transition-all duration-300 border border-border-hairline/60 shadow-sm" id="interieurplan">
+          <div class="flex items-center gap-space-xs mb-space-sm">
+            <span class="font-serif text-[1.4rem] text-clay-terracotta">05</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text font-label-caps text-[10px] uppercase tracking-wider">Ontwerp &amp; Visualisatie</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-x-space-md gap-y-space-xs pb-space-md mb-space-md border-b border-border-hairline">
+            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Compleet Interieurplan</h3>
+            <div class="flex items-baseline gap-space-sm sm:flex-col sm:items-end sm:gap-0.5 shrink-0">
+              <span class="font-serif text-[1.75rem] leading-none text-clay-terracotta whitespace-nowrap">Vanaf € 1.299,-</span>
+              <span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider whitespace-nowrap">Offerte op maat</span>
+            </div>
+          </div>
           <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">Visualisatie helpt bij het maken van de keuzes bij de inrichting. Na een gesprek waarin uw wensen worden besproken, gaan wij aan de slag. Hierbij kunnen meerdere afspraken in onze winkel of op locatie plaatsvinden. Alle wensen, het budget en de mogelijkheden worden overlegd en vervolgens verwerkt in een compleet interieurplan en een offerte.</p>
           <div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
             <span class="px-space-sm py-space-xs rounded-full bg-canvas-cream text-espresso-text text-body-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-clay-terracotta">dashboard</span>Moodboard</span>
@@ -490,64 +516,9 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
             <li>De stempelkaart is niet geldig op meubelen, verf, behang en advieskosten.</li>
           </ul>
         </div>
+      
       </div>
-
-      <!-- Moodboard & 3D-plan -->
-      <div class="lg:col-span-5 relative space-y-space-xl">
-        <!-- In de winkel (hoort bij #1 en #2) -->
-        <div class="bg-canvas-cream p-space-lg rounded border border-border-hairline shadow-lg space-y-space-md">
-          <div class="flex items-center justify-between gap-space-sm border-b border-border-hairline pb-space-sm">
-            <div class="flex items-center gap-space-xs text-clay-terracotta">
-              <span class="material-symbols-outlined text-[20px]">storefront</span>
-              <span class="font-label-caps text-label-caps uppercase tracking-wider">In de Winkel</span>
-            </div>
-            <span class="font-label-caps text-[10px] text-secondary uppercase text-right">Eindhovenseweg 16</span>
-          </div>
-          <div class="relative rounded overflow-hidden shadow-inner bg-surface-taupe">
-            <img src="images/eigen/keramiek-terracotta-vazen.jpg" alt="Handbeschilderde terracotta vazen met zwart-witte grepen uit de collectie van Abbey Lane" loading="lazy" width="1695" height="1800" class="block w-full h-auto"/>
-            <div class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 backdrop-blur-sm rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Uit de Collectie</div>
-          </div>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Loop binnen in onze winkel in Valkenswaard. Samen met onze styliste kiest u de juiste meubels en accessoires, en leggen we kleurstalen, behang en stoffen naast elkaar.</p>
-          <ul class="grid grid-cols-2 gap-space-xs">
-              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">redeem</span><span class="text-[11px] font-medium text-primary leading-tight">Personal shopping gratis</span></li>
-              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">schedule</span><span class="text-[11px] font-medium text-primary leading-tight">Kort advies tot 30 min gratis</span></li>
-              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">palette</span><span class="text-[11px] font-medium text-primary leading-tight">Verf-, behang- &amp; stofstalen</span></li>
-              <li class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-clay-terracotta">card_giftcard</span><span class="text-[11px] font-medium text-primary leading-tight">Cadeaubon bij uitgebreid advies</span></li>
-          </ul>
-          <div class="p-space-sm rounded bg-secondary-container/40 border border-secondary-container flex items-center justify-between gap-space-xs">
-            <div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px] text-clay-terracotta">schedule</span><span class="font-label-caps text-[11px] uppercase tracking-wider">Maandag t/m zaterdag open</span></div>
-            <a href="#contact" class="text-body-sm text-secondary font-serif italic hover:text-primary transition-colors">Openingstijden</a>
-          </div>
-        </div>
-
-        <div class="bg-canvas-cream p-space-lg rounded border border-border-hairline shadow-lg space-y-space-md">
-          <div class="flex items-center justify-between gap-space-sm border-b border-border-hairline pb-space-sm">
-            <div class="flex items-center gap-space-xs text-clay-terracotta">
-              <span class="material-symbols-outlined text-[20px]">dashboard</span>
-              <span class="font-label-caps text-label-caps uppercase tracking-wider">Atelier Moodboard No. 04</span>
-            </div>
-            <span class="font-label-caps text-[10px] text-secondary uppercase text-right">Uit de Winkel</span>
-          </div>
-          <div class="relative rounded overflow-hidden shadow-inner bg-surface-taupe">
-            <img src="images/eigen/moodboard.jpg" alt="Moodboard met een schets van een maatwerkkast, groen behang met bladmotief, een bouclé fauteuil en sfeerfoto's van het interieur" loading="lazy" width="1131" height="1600" class="block w-full h-auto"/>
-            <div class="absolute bottom-2 right-2 px-space-sm py-space-xs bg-espresso-deep/80 backdrop-blur-sm rounded-md text-canvas-cream text-[10px] font-label-caps uppercase tracking-wider">Moodboard</div>
-          </div>
-          <div>
-            <p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary mb-space-xs">Tactiele Curatie:</p>
-            <div class="grid grid-cols-2 gap-space-xs">
-              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-clay-terracotta shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Terracotta Krijt</span><span class="text-[9px] text-on-surface-variant">Mia Colore Calda</span></div></div>
-              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-surface-taupe border border-border-hairline shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Linnen Weefsel</span><span class="text-[9px] text-on-surface-variant">Meubelstoffering</span></div></div>
-              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-olive-khaki shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Salie &amp; Olive</span><span class="text-[9px] text-on-surface-variant">Velours Touch</span></div></div>
-              <div class="p-space-xs rounded-md bg-surface-plaster flex items-center gap-space-xs"><span class="w-4 h-4 rounded-full bg-espresso-deep shrink-0"></span><div class="flex flex-col leading-tight"><span class="text-[11px] font-medium text-primary">Gerookt Eiken</span><span class="text-[9px] text-on-surface-variant">Mat Gelakt Bespoke</span></div></div>
-            </div>
-          </div>
-          <div class="p-space-sm rounded bg-secondary-container/40 border border-secondary-container flex items-center justify-between gap-space-xs">
-            <div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px] text-clay-terracotta">verified</span><span class="font-label-caps text-[11px] uppercase tracking-wider">Kleurstalen in de Winkel</span></div>
-            <span class="text-body-sm text-secondary font-serif italic">Valkenswaard</span>
-          </div>
-        </div>
-
-        <!-- 3D-interieurplan (uit de folder) -->
+      <div class="lg:col-span-5">
         <div class="bg-canvas-cream p-space-lg rounded border border-border-hairline shadow-lg space-y-space-md">
           <div class="flex items-center justify-between gap-space-sm border-b border-border-hairline pb-space-sm">
             <div class="flex items-center gap-space-xs text-clay-terracotta">
@@ -1099,7 +1070,7 @@ tailwind.config={theme:{extend:{colors:{"surface":"rgb(var(--c-surface) / <alpha
   </div>
 </footer>
 
-<script src="js/main.js?v=6"></script>
+<script src="js/main.js?v=7"></script>
 <script src="js/animations.js?v=6"></script>
 </body>
 </html>

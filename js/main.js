@@ -9,63 +9,6 @@
   var FORM_ENDPOINT = '';
   var STUDIO_EMAIL = 'interieuradvies@abbeylane.nl';
 
-  // ---- Kleurthema: licht / roze --------------------------------------------
-  var root = document.documentElement;
-  var themeMeta = document.querySelector('meta[name="theme-color"]');
-  var THEME_BG = { licht: '#FDFBF8', roze: '#F8ECE7' };
-  var animTimer;
-
-  function setTheme(theme, animate) {
-    if (animate) {
-      root.classList.add('theme-anim');
-      clearTimeout(animTimer);
-      animTimer = setTimeout(function () { root.classList.remove('theme-anim'); }, 600);
-    }
-    root.dataset.theme = theme;
-    themeMeta.setAttribute('content', THEME_BG[theme]);
-    document.querySelectorAll('[data-theme-option]').forEach(function (btn) {
-      btn.setAttribute('aria-pressed', String(btn.dataset.themeOption === theme));
-    });
-    try { localStorage.setItem('al-theme', theme); } catch (e) {}
-  }
-  document.querySelectorAll('[data-theme-option]').forEach(function (btn) {
-    btn.addEventListener('click', function () { setTheme(btn.dataset.themeOption, true); });
-  });
-  setTheme(root.dataset.theme || 'licht', false);
-
-  // ---- Lettertype: klassiek / abbey ----------------------------------------
-  function setFont(font, animate) {
-    if (animate) {
-      root.classList.add('theme-anim');
-      clearTimeout(animTimer);
-      animTimer = setTimeout(function () { root.classList.remove('theme-anim'); }, 600);
-    }
-    root.dataset.font = font;
-    document.querySelectorAll('[data-font-option]').forEach(function (btn) {
-      btn.setAttribute('aria-pressed', String(btn.dataset.fontOption === font));
-    });
-    try { localStorage.setItem('al-font', font); } catch (e) {}
-    window.dispatchEvent(new Event('resize')); // header-hoogte en animaties opnieuw meten
-  }
-  document.querySelectorAll('[data-font-option]').forEach(function (btn) {
-    btn.addEventListener('click', function () { setFont(btn.dataset.fontOption, true); });
-  });
-  setFont(root.dataset.font || 'klassiek', false);
-
-  // ---- Weergave-menu (kleur & lettertype) in de header ----------------------
-  var setBtn = document.getElementById('settings-toggle');
-  var setPanel = document.getElementById('settings-panel');
-  if (setBtn && setPanel) {
-    var toggleSettings = function (open) {
-      setPanel.classList.toggle('hidden', !open);
-      setBtn.setAttribute('aria-expanded', String(open));
-    };
-    setBtn.addEventListener('click', function (e) { e.stopPropagation(); toggleSettings(setPanel.classList.contains('hidden')); });
-    setPanel.addEventListener('click', function (e) { e.stopPropagation(); });
-    document.addEventListener('click', function () { toggleSettings(false); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggleSettings(false); });
-  }
-
   // ---- Mobiel menu ---------------------------------------------------------
   var menu = document.getElementById('mobile-menu');
   var openBtn = document.getElementById('menu-open');
