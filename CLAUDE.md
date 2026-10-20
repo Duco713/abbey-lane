@@ -42,6 +42,9 @@ Statische site: `index.html` + `portfolio.html`, Tailwind via CDN, eigen JS/CSS.
   andere varianten en de knop verwijderen.
 - Animaties: `css/animations.css` + `js/animations.js` (respecteert reduced motion). Hotspots: klasse `.hotspot`.
 - Menu volgt de volgorde van de pagina: Advies & Styling · Eigen Label · Portfolio · Reviews · Over Ons · Merken · Contact.
+- Portfolio: `portfolio.html` = eenvoudige versie voor variant 1 (alle 31 projecten in de kaartopmaak van de homepage,
+  zonder filter/lightbox). De uitgebreide versie (uitgelicht project met hotspots, filter, lightbox, `js/portfolio.js`)
+  is geparkeerd als `portfolio-uitgebreid.html` (+ git-tag `portfolio-uitgebreid-v1`) voor variant 2. Niet gelinkt.
 - Afbeeldingen: `images/eigen/` (eigen foto's), `images/projecten/` (31 portfoliofoto's), `images/projecten/hd/` (homepage).
 - Bij wijzigen van JS/CSS: versienummer in de `?v=` achter de bestandsnaam verhogen (cache).
 
